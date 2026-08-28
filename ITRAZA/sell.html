@@ -873,7 +873,7 @@ Sell on WhatsApp
 
 <!-- ================= MEDIA EQUIPMENT ================= -->
 
-<div class="card" data-cat="media">
+<div class="card" data-cat="it">
 
     <div class="card-img">
         <img
@@ -917,7 +917,7 @@ Sell on WhatsApp
 
 <!-- ================= CAMERAS ================= -->
 
-<div class="card" data-cat="media">
+<div class="card" data-cat="it">
 
     <div class="card-img">
         <img
@@ -961,7 +961,7 @@ Sell on WhatsApp
 
 <!-- ================= PROJECTORS ================= -->
 
-<div class="card" data-cat="media">
+<div class="card" data-cat="it">
 
     <div class="card-img">
         <img
@@ -1435,71 +1435,67 @@ Sell on WhatsApp
     
     
     <script>
-    
-    const filters =
-    document.querySelectorAll(".filter");
-    
-    const cards =
-    document.querySelectorAll(".card");
-    
-    
-    filters.forEach(btn => {
-    
-    btn.addEventListener("click", () => {
-    
-    filters.forEach(x =>
-    x.classList.remove("active")
-    );
-    
-    btn.classList.add("active");
-    
-    const f = btn.dataset.filter;
-    
-    cards.forEach(card => {
-    
-    if(f === "all" || card.dataset.cat === f){
-    
-    card.style.display = "block";
-    
-    }else{
-    
-    card.style.display = "none";
-    
+
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".card");
+
+filters.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        // Active filter
+        filters.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        // Selected category
+        const selected = button.dataset.filter;
+
+        // Show / hide cards
+        cards.forEach(card => {
+
+            const category = card.dataset.cat;
+
+            if (selected === "all" || category === selected) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+
+// BACK TO TOP
+
+const topButton = document.getElementById("toTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 450) {
+        topButton.classList.add("show");
+    } else {
+        topButton.classList.remove("show");
     }
-    
-    });
-    
-    });
-    
-    });
-    
-    
-    const top =
-    document.getElementById("toTop");
-    
-    
-    window.addEventListener("scroll", () => {
-    
-    top.classList.toggle(
-    "show",
-    scrollY > 450
-    );
-    
-    });
-    
-    
-    top.onclick = e => {
-    
+
+});
+
+topButton.addEventListener("click", (e) => {
+
     e.preventDefault();
-    
-    scrollTo({
-    top:0,
-    behavior:"smooth"
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
-    
-    };
-    
-    </script>
-    
+
+});
+
+</script>    
     </body>
     </html>
