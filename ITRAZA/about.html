@@ -60,23 +60,37 @@ header{
 }
 
 .logo{
-    font-size:1.75rem;
+    display:flex;
+    align-items:center;
+    gap:10px;
     font-weight:900;
     color:#fff;
 }
 
-.logo span{
+.logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    display:block;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:25px;
+    color:#fff;
+}
+
+.logo-text strong span{
     color:#facc15;
 }
 
-.logo small{
+.logo-text small{
     display:block;
-    font-size:.62rem;
-    letter-spacing:2.4px;
+    font-size:10px;
+    letter-spacing:2px;
     color:#9fb0c3;
-    font-weight:500;
+    margin-top:2px;
 }
-
 nav{
     display:flex;
     gap:22px;
@@ -110,7 +124,32 @@ nav a.active{
     transform:translateY(-3px);
     box-shadow:0 8px 25px #25d36655;
 }
+@media(max-width:700px){
 
+    .header-flex{
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        padding:8px 0;
+    }
+
+    .logo img{
+        width:55px;
+        height:55px;
+    }
+
+    .logo-text strong{
+        font-size:21px;
+    }
+
+    .logo-text small{
+        font-size:8px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
 
 /* ================= BACK BUTTON ================= */
 .back-row {
@@ -888,7 +927,7 @@ nav a.active{
 
         <div class="logo">
             <img src="logo.jpeg" alt="Raza IT Recycling Logo">
-        </div>
+            
             <div class="logo-text">
                 <strong>IT <span>RAZA</span></strong>
                 <small>SCRAP BUYERS</small>
