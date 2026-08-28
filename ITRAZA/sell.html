@@ -32,89 +32,63 @@ margin:auto
 }
 
 /* HEADER */
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:#071524;
-border-bottom:1px solid #213a54;
-box-shadow:0 5px 25px #0006
+header {
+    background: #06101f;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.header-flex{
-min-height:78px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.logo{
-font-size:1.75rem;
-font-weight:900;
-color:#fff
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo span{
-color:#facc15
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
-.logo small{
-display:block;
-font-size:.62rem;
-letter-spacing:2.4px;
-color:#9fb0c3;
-font-weight:500
+.logo-text strong {
+    display: block;
+    font-size: 25px;
+    color: white;
 }
 
-nav{
-display:flex;
-gap:22px;
-align-items:center
+.logo-text strong span {
+    color: #ffc400;
 }
 
-nav a{
-color:#d9e3ee;
-font-weight:600;
-padding:28px 0 22px;
-border-bottom:3px solid transparent
+.logo-text small {
+    display: block;
+    color: #ddd;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 nav a:hover,
-nav a.active{
-color:#facc15;
-border-color:#facc15
+nav a.active {
+    color: #ffc400;
 }
-
-.top-wa{
-background:#25d366;
-color:#fff;
-padding:12px 18px;
-border-radius:8px;
-font-weight:800
-}
-
-/* BACK */
-
-.back-row{
-padding:22px 0 5px
-}
-
-.back-btn{
-display:inline-flex;
-gap:8px;
-color:#dbe7f3;
-border:1px solid #38506a;
-padding:9px 15px;
-border-radius:9px
-}
-
-.back-btn:hover{
-color:#facc15;
-border-color:#facc15
-}
-
 /* HERO */
 
 .hero{
@@ -540,7 +514,94 @@ flex-direction:column
 }
 
 }
+/* ===== MOBILE MENU ===== */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+
+    header {
+        padding: 8px 0;
+    }
+
+    .header-flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text strong {
+        font-size: 21px;
+    }
+
+    .logo-text small {
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #06101f;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 1000;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 10px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .contact-highlight {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 30px;
+        padding: 18px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-preview-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 </style>
 </head>
 
@@ -549,34 +610,30 @@ flex-direction:column
 <!-- HEADER -->
 
 <header>
-<div class="container header-flex">
+    <div class="container header-flex">
 
-<a href="index.html" class="logo">
-IT <span>RAZA</span>
-<small>SCRAP BUYERS</small>
-</a>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Raza IT Recycling Logo">
 
-<nav>
-<a href="index.html">Home</a>
-<a href="item.html">Items</a>
-<a href="sell.html" class="active">Buyer</a>
-<a href="gaming.html">Gaming</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+            <div class="logo-text">
+                <strong>IT <span>RAZA</span></strong>
+                <small>SCRAP BUYERS</small>
+            </div>
+        </div>
+<button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</button>
+        <nav>
+            <a href="index.html" >Home</a>
+            <a href="item.html">Items</a>
+            <a href="sell.html" class="active">Buyer</a>
+            <a href="gaming.html">Gaming</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-<a class="top-wa"
-href="https://wa.me/971504134208"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-WhatsApp Us
-
-</a>
-
-</div>
+    </div>
 </header>
-
 
 <!-- BACK BUTTON -->
 
@@ -1497,5 +1554,11 @@ topButton.addEventListener("click", (e) => {
 });
 
 </script>    
+    <script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("show");
+}
+</script>
     </body>
     </html>
