@@ -141,7 +141,63 @@ footer{background:#040c16;border-top:4px solid #facc15;margin-top:60px}
         rgba(0,0,0,.75)
     );
 }
+header {
+    background: #06101f;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 25px;
+    color: white;
+}
+
+.logo-text strong span {
+    color: #ffc400;
+}
+
+.logo-text small {
+    display: block;
+    color: #ddd;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffc400;
+}
 
 /* BADGE */
 
@@ -334,22 +390,25 @@ footer{background:#040c16;border-top:4px solid #facc15;margin-top:60px}
     <div class="container header-flex">
 
         <div class="logo">
-            <img src="logo.jpeg.jpg" alt="Raza IT Recycling Logo">
+            <img src="1000771274.jpg" alt="Raza IT Recycling Logo">
 
             <div class="logo-text">
                 <strong>IT <span>RAZA</span></strong>
                 <small>SCRAP BUYERS</small>
             </div>
         </div>
-<nav>
-<a href="index.html">Home</a>
-<a href="item.html" class="active">Items</a>
-<a href="sell.html">Buyer</a> 
-<a href="gaming.html">Gaming</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-<a class="top-wa" href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="item.html" class="active">Items</a>
+            <a href="sell.html">Buyer</a>
+            <a href="gaming.html">Gaming</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header><a class="top-wa" href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
 </div>
 </header>
 
