@@ -359,6 +359,94 @@ nav a.active {
                 text-align: center;
             }
         }
+        /* ===== MOBILE MENU ===== */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+
+    header {
+        padding: 8px 0;
+    }
+
+    .header-flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text strong {
+        font-size: 21px;
+    }
+
+    .logo-text small {
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #06101f;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 1000;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 10px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .contact-highlight {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 30px;
+        padding: 18px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-preview-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -374,7 +462,9 @@ nav a.active {
                 <small>SCRAP BUYERS</small>
             </div>
         </div>
-
+<button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</button>
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="item.html">Items</a>
@@ -481,6 +571,11 @@ nav a.active {
             <p style="margin-top: 6px; font-size: 0.9rem;">Best & Fast Service • Free Pickup • Best Rates</p>
         </div>
     </footer>
-
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("show");
+}
+</script>
 </body>
 </html>
