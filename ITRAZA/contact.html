@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Raza - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background: #f0f4f8;
+            color: #1a202c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1a2e;
+            color: #fff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .logo span {
+            color: #facc15;
+        }
+        .logo small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #94a3b8;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 0;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #facc15;
+            border-bottom-color: #facc15;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            background: linear-gradient(135deg, #0b1a2e, #1e3a5f);
+            color: #fff;
+            padding: 50px 0 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .page-title h1 {
+            font-size: 2.8rem;
+        }
+        .page-title h1 span {
+            color: #facc15;
+        }
+
+        /* CONTACT SECTION */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 30px 0 60px;
+        }
+
+        .contact-info {
+            flex: 1 1 300px;
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .contact-info h2 {
+            color: #0b1a2e;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .contact-info i {
+            color: #1e3a5f;
+            width: 30px;
+            font-size: 1.2rem;
+        }
+        .contact-info .social {
+            margin-top: 24px;
+        }
+        .contact-info .social a {
+            color: #1e3a5f;
+            font-size: 1.8rem;
+            margin-right: 16px;
+            transition: 0.3s;
+        }
+        .contact-info .social a:hover {
+            color: #25d366;
+        }
+        .contact-info .whatsapp-direct {
+            display: inline-block;
+            background: #25d366;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+        .contact-info .whatsapp-direct:hover {
+            background: #1da851;
+            transform: scale(1.02);
+        }
+
+        .contact-form {
+            flex: 2 1 400px;
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .contact-form h2 {
+            color: #0b1a2e;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            font-weight: 600;
+            display: block;
+            margin: 14px 0 4px;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #d1d9e6;
+            border-radius: 16px;
+            font-size: 1rem;
+            background: #f8fafc;
+            transition: 0.3s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: #facc15;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);
+        }
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* WhatsApp Button */
+        .btn-whatsapp {
+            background: #25d366;
+            color: #fff;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 18px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: scale(1.01);
+        }
+        .btn-whatsapp i {
+            font-size: 1.4rem;
+        }
+
+        .map-placeholder {
+            background: #e2e8f0;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #475569;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #0b1a2e;
+            color: #94a3b8;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 4px solid #facc15;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav {
+                justify-content: center;
+            }
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            .contact-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">IT <span>Raza</span><small>SCRAP BUYERS</small></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="item.html">Items</a>
+                <a href="sell.html">BUYER</a> 
+                <a href="gaming.html">Gaming</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Contact <span>Us</span></h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">Fill the form & send directly to our WhatsApp</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="contact-wrapper">
+
+            <!-- LEFT: INFO -->
+            <div class="contact-info">
+                <h2><i class="fas fa-address-card"></i> Reach Us</h2>
+                <p><i class="fas fa-phone-alt"></i> <strong>+971 50 413 4208</strong> (Call / WhatsApp)</p>
+                <p><i class="fas fa-envelope"></i> <strong>Owaisrazascrap@gmail.com</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Sharjah, United Arab Emirates</strong></p>
+                <p><i class="fas fa-clock"></i> Sat - Thu: 9:00 AM – 9:00 PM</p>
+
+                <div class="social">
+                    <a href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <a href="https://wa.me/971504134208" target="_blank" class="whatsapp-direct">
+                    <i class="fab fa-whatsapp"></i> Direct WhatsApp
+                </a>
+
+                <div style="margin-top: 24px; background: #fef9e7; padding: 16px; border-radius: 16px; border-left: 4px solid #facc15;">
+                    <p style="margin: 0; font-style: italic; font-size: 0.95rem;">
+                        "We wouldn't mind any quantity — we compete the best price to meet mutual business goals."
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT: FORM WITH WHATSAPP -->
+            <div class="contact-form">
+                <h2><i class="fab fa-whatsapp" style="color:#25d366;"></i> Send via WhatsApp</h2>
+                <p style="color: #64748b; margin-bottom: 12px;">Fill the form and click the button to message us on WhatsApp with all your details.</p>
+
+                <form id="whatsappForm">
+                    <label for="fullName">Your Name *</label>
+                    <input type="text" id="fullName" placeholder="e.g. Ahmed Khan" required />
+
+                    <label for="phoneNumber">Phone Number *</label>
+                    <input type="tel" id="phoneNumber" placeholder="+971 50 123 4567" required />
+
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" id="emailAddress" placeholder="you@example.com" />
+
+                    <label for="itemDetails">What are you selling? *</label>
+                    <select id="itemDetails" required>
+                        <option value="">Select item type...</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Desktops">Desktops</option>
+                        <option value="Servers">Servers</option>
+                        <option value="Printers">Printers</option>
+                        <option value="Routers / Switches">Routers / Switches</option>
+                        <option value="Monitors / LCD">Monitors / LCD</option>
+                        <option value="Mobile / Tablets">Mobile / Tablets</option>
+                        <option value="Hard Drives">Hard Drives (SSD/HDD)</option>
+                        <option value="Cables / Accessories">Cables / Accessories</option>
+                        <option value="Other">Other (specify below)</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" placeholder="e.g. 5 units, 1 box, bulk stock" />
+
+                    <label for="message">Additional Details</label>
+                    <textarea id="message" placeholder="Brand, condition, location, etc."></textarea>
+
+                    <!-- WHATSAPP BUTTON -->
+                    <button type="submit" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Send & Get Quote on WhatsApp
+                    </button>
+                </form>
+
+                <div id="formFeedback" style="margin-top: 14px; font-weight: 600; text-align: center;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <strong>IT Raza Scrap Buyers</strong> — Best & Fast Service • Free Pickup • Best Rates</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT: WhatsApp Integration ===== -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phoneNumber').value.trim();
+            const email = document.getElementById('emailAddress').value.trim();
+            const item = document.getElementById('itemDetails').value;
+            const quantity = document.getElementById('quantity').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate required fields
+            if (!name || !phone || !item) {
+                document.getElementById('formFeedback').innerHTML = '⚠️ Please fill in Name, Phone, and Item Type.';
+                document.getElementById('formFeedback').style.color = '#dc2626';
+                return;
+            }
+
+            // Build WhatsApp message
+            let whatsappMsg = 'Hello IT Raza Scrap Buyers!%0A%0A';
+            whatsappMsg += '📋 *New Quote Request*%0A';
+            whatsappMsg += '────────────────%0A';
+            whatsappMsg += `👤 *Name:* ${name}%0A`;
+            whatsappMsg += `📱 *Phone:* ${phone}%0A`;
+            if (email) whatsappMsg += `✉️ *Email:* ${email}%0A`;
+            whatsappMsg += `💻 *Item Type:* ${item}%0A`;
+            if (quantity) whatsappMsg += `📦 *Quantity:* ${quantity}%0A`;
+            if (message) whatsappMsg += `📝 *Details:* ${message}%0A`;
+            whatsappMsg += '────────────────%0A';
+            whatsappMsg += 'Please provide your best quote. Thank you!';
+
+            // Your WhatsApp number (with country code, no + or 00)
+            const whatsappNumber = '971504134208';
+
+            // Open WhatsApp
+            const url = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+            window.open(url, '_blank');
+
+            // Show feedback
+            document.getElementById('formFeedback').innerHTML = '✅ Opening WhatsApp... Please send the message!';
+            document.getElementById('formFeedback').style.color = '#16a34a';
+
+            // Optionally reset form after a moment
+            // this.reset();
+        });
+    </script>
+
+</body>
+</html>

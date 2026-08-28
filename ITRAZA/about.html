@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IT Raza | About Us</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#06111f;
+    color:#eaf1f8;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1250px,92%);
+    margin:auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#071524ee;
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #213a54;
+    box-shadow:0 5px 25px #0006;
+}
+
+.header-flex{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:1.75rem;
+    font-weight:900;
+    color:#fff;
+}
+
+.logo span{
+    color:#facc15;
+}
+
+.logo small{
+    display:block;
+    font-size:.62rem;
+    letter-spacing:2.4px;
+    color:#9fb0c3;
+    font-weight:500;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+nav a{
+    color:#d9e3ee;
+    font-weight:600;
+    padding:28px 0 22px;
+    border-bottom:3px solid transparent;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#facc15;
+    border-color:#facc15;
+}
+
+.top-wa{
+    background:#25d366;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.top-wa:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px #25d36655;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-row{
+    padding:22px 0 5px;
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#dbe7f3;
+    border:1px solid #38506a;
+    padding:9px 15px;
+    border-radius:9px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    color:#facc15;
+    border-color:#facc15;
+    transform:translateX(-5px);
+}
+
+
+/* ================= HERO ================= */
+
+.about-hero{
+    position:relative;
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 80% 30%,#facc1520,transparent 27%),
+    radial-gradient(circle at 20% 80%,#2672ff18,transparent 30%),
+    linear-gradient(135deg,#06111f,#0a1d33 55%,#07111e);
+}
+
+
+/* GLOWING CIRCLES */
+
+.about-hero:before{
+    content:"";
+    position:absolute;
+    width:480px;
+    height:480px;
+    border-radius:50%;
+    border:1px solid #facc1530;
+    right:-150px;
+    top:-150px;
+    animation:rotateGlow 12s linear infinite;
+}
+
+.about-hero:after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    border:1px solid #25d36625;
+    left:-140px;
+    bottom:-140px;
+    animation:rotateGlow 10s linear infinite reverse;
+}
+
+@keyframes rotateGlow{
+
+    from{
+        transform:rotate(0deg) scale(1);
+    }
+
+    50%{
+        transform:rotate(180deg) scale(1.1);
+    }
+
+    to{
+        transform:rotate(360deg) scale(1);
+    }
+
+}
+
+
+/* HERO GRID */
+
+.hero-grid{
+    width:min(1250px,92%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* BADGE */
+
+.badge{
+    display:inline-block;
+
+    border:1px solid #facc15;
+    color:#facc15;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-weight:800;
+    font-size:.8rem;
+
+    margin-bottom:20px;
+
+    animation:pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge{
+
+    0%,100%{
+        box-shadow:0 0 0 #facc1500;
+    }
+
+    50%{
+        box-shadow:0 0 25px #facc1540;
+    }
+
+}
+
+
+/* HERO TEXT */
+
+.hero-text h1{
+    font-size:clamp(2.7rem,6vw,5.2rem);
+
+    line-height:1;
+
+    font-weight:950;
+}
+
+.hero-text h1 span{
+    color:#facc15;
+}
+
+.hero-text p{
+    color:#aebdcd;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    margin:24px 0;
+
+    max-width:650px;
+}
+
+
+/* BUTTONS */
+
+.hero-btns{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    background:#facc15;
+    color:#071321;
+
+    padding:14px 22px;
+
+    border-radius:9px;
+
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px #facc1540;
+}
+
+.secondary-btn{
+    border:1px solid #38506a;
+
+    color:#eaf1f8;
+
+    padding:14px 22px;
+
+    border-radius:9px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    border-color:#facc15;
+    color:#facc15;
+}
+
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual{
+    height:430px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* MAIN CIRCLE */
+
+.visual-circle{
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    border:1px solid #facc1555;
+
+    background:
+    radial-gradient(circle,#facc1518,transparent 65%);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    animation:float 4s ease-in-out infinite;
+
+    box-shadow:
+    0 0 90px #facc1518,
+    inset 0 0 50px #facc1510;
+}
+
+.visual-circle i{
+    font-size:7rem;
+
+    color:#facc15;
+
+    filter:
+    drop-shadow(0 0 25px #facc1580);
+}
+
+
+/* ORBIT */
+
+.orbit{
+    position:absolute;
+
+    width:390px;
+    height:390px;
+
+    border:1px dashed #facc1540;
+
+    border-radius:50%;
+
+    animation:spin 12s linear infinite;
+}
+
+.orbit-dot{
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    border-radius:50%;
+
+    background:#facc15;
+
+    box-shadow:0 0 20px #facc15;
+
+    top:25px;
+    left:50%;
+}
+
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+
+/* ================= STATS ================= */
+
+.stats{
+    padding:35px 0;
+
+    background:#071524;
+
+    border-top:1px solid #213a54;
+    border-bottom:1px solid #213a54;
+}
+
+.stats-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+}
+
+.stat{
+    text-align:center;
+
+    padding:20px;
+
+    border-right:1px solid #213a54;
+
+    transition:.3s;
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
+}
+
+.stat i{
+    font-size:1.7rem;
+
+    color:#facc15;
+
+    margin-bottom:10px;
+}
+
+.stat h2{
+    font-size:2.2rem;
+
+    color:#fff;
+}
+
+.stat p{
+    color:#8498ac;
+
+    font-size:.85rem;
+
+    margin-top:5px;
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+}
+
+.section-title h2 span{
+    color:#facc15;
+}
+
+.line{
+    width:85px;
+    height:4px;
+
+    background:#facc15;
+
+    margin:15px auto;
+
+    border-radius:5px;
+}
+
+.section-title p{
+    color:#91a5ba;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.7;
+}
+
+
+/* ================= STORY ================= */
+
+.story-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.story-image{
+    min-height:430px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(#06111f22,#06111f55),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+
+    border:1px solid #29465f;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 60px #0005;
+}
+
+
+/* IMAGE SHINE */
+
+.story-image:after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent 30%,
+    #ffffff15 50%,
+    transparent 70%
+    );
+
+    transform:translateX(-100%);
+
+    animation:shine 4s infinite;
+}
+
+@keyframes shine{
+
+    to{
+        transform:translateX(100%);
+    }
+
+}
+
+
+.story-content h2{
+    font-size:2.2rem;
+
+    margin-bottom:18px;
+}
+
+.story-content h2 span{
+    color:#facc15;
+}
+
+.story-content p{
+    color:#9eafc1;
+
+    line-height:1.85;
+
+    margin-bottom:16px;
+}
+
+.story-list{
+    margin-top:20px;
+
+    display:grid;
+
+    gap:12px;
+}
+
+.story-list div{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#dce6ef;
+}
+
+.story-list i{
+    color:#25d366;
+}
+
+
+/* ================= MOBILE HEADER ================= */
+
+@media(max-width:1050px){
+
+    nav{
+        gap:14px;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    .hero-grid{
+        gap:30px;
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:800px){
+
+    .header-flex{
+        flex-direction:column;
+
+        padding:15px 0;
+    }
+
+    nav{
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    nav a{
+        padding:5px 0;
+    }
+
+    .top-wa{
+        display:none;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:60px 0;
+    }
+
+    .hero-text p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-btns{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:550px){
+
+    .about-hero{
+        min-height:auto;
+    }
+
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+
+    .hero-visual{
+        height:340px;
+    }
+
+    .visual-circle{
+        width:240px;
+        height:240px;
+    }
+
+    .visual-circle i{
+        font-size:5rem;
+    }
+
+    .orbit{
+        width:285px;
+        height:285px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:0;
+        border-bottom:1px solid #213a54;
+    }
+
+    .stat:last-child{
+        border-bottom:0;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container header-flex">
+
+<a href="index.html" class="logo">
+
+IT <span>RAZA</span>
+
+<small>SCRAP BUYERS</small>
+
+</a>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="item.html">
+Items
+</a>
+
+<a href="buy.html">
+Buy
+</a>
+
+<a href="sell.html">
+Sell
+</a>
+
+<a href="gaming.html">
+Gaming
+</a>
+
+<a href="about.html" class="active">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+
+<a
+class="top-wa"
+href="https://wa.me/971504134208"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+WhatsApp Us
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- ================= BACK ================= -->
+
+<div class="container back-row">
+
+<a
+href="index.html"
+class="back-btn">
+
+<i class="fas fa-arrow-left"></i>
+
+Back to Home
+
+</a>
+
+</div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+<div class="hero-grid">
+
+
+<div class="hero-text">
+
+<span class="badge">
+ABOUT IT RAZA • SHARJAH & UAE
+</span>
+
+
+<h1>
+
+ABOUT <span>IT RAZA</span>
+
+</h1>
+
+
+<p>
+
+IT Raza is a professional buying and selling
+business focused on IT equipment, electronics,
+gaming products, networking equipment,
+music & sound systems and selected medical
+equipment across Sharjah & UAE.
+
+</p>
+
+
+<div class="hero-btns">
+
+<a
+class="primary-btn"
+href="sell.html">
+
+<i class="fas fa-hand-holding-dollar"></i>
+
+Sell Your Items
+
+</a>
+
+
+<a
+class="secondary-btn"
+href="item.html">
+
+<i class="fas fa-cart-shopping"></i>
+
+Browse Items
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ANIMATED VISUAL -->
+
+<div class="hero-visual">
+
+<div class="orbit">
+
+<div class="orbit-dot"></div>
+
+</div>
+
+
+<div class="visual-circle">
+
+<i class="fas fa-microchip"></i>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+
+<div class="stat">
+
+<i class="fas fa-boxes-stacked"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="500">
+0
+</span>+
+
+</h2>
+
+<p>
+Items Handled
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-users"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="300">
+0
+</span>+
+
+</h2>
+
+<p>
+Customers
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-layer-group"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="15">
+0
+</span>+
+
+</h2>
+
+<p>
+Categories
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-headset"></i>
+
+<h2>
+24/7
+</h2>
+
+<p>
+WhatsApp Support
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!--
+=================================================
+PART 1 END
+
+PART 2 IS PASTED DIRECTLY BELOW THIS LINE
+=================================================
+-->
+
+<!-- ================= ABOUT STORY ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHO <span>WE ARE</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Professional buying and selling of IT equipment,
+electronics and selected professional equipment.
+</p>
+
+</div>
+
+
+<div class="story-grid">
+
+
+<div class="story-image"></div>
+
+
+<div class="story-content">
+
+<span class="badge">
+IT RAZA • OUR STORY
+</span>
+
+<h2>
+BUILT ON <span>TRUST & VALUE</span>
+</h2>
+
+<p>
+IT Raza is focused on making the process of
+buying and selling equipment simple, convenient
+and professional.
+</p>
+
+<p>
+We deal in a wide range of IT hardware,
+networking equipment, gaming products,
+music & sound systems and selected medical
+equipment in Sharjah UAE.
+</p>
+
+
+<div class="story-list">
+
+<div>
+<i class="fas fa-circle-check"></i>
+IT Hardware & Computer Equipment
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Laptops, PCs & Components
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Networking & Server Equipment
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Gaming Products & Accessories
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Music & Professional Sound Systems
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Selected Medical Equipment
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHY <span>IT RAZA?</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Our goal is to provide a smooth and reliable
+experience for both buyers and sellers.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-handshake"></i>
+
+</div>
+
+<h3>
+Trusted Service
+</h3>
+
+<p>
+Professional communication and a straightforward
+process for buying and selling equipment.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-magnifying-glass"></i>
+
+</div>
+
+<h3>
+Proper Evaluation
+</h3>
+
+<p>
+We consider the item's model, condition,
+specifications and market demand.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-bolt"></i>
+
+</div>
+
+<h3>
+Quick Response
+</h3>
+
+<p>
+Send your item details through WhatsApp
+and get a quick response from our team.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-layer-group"></i>
+
+</div>
+
+<h3>
+Wide Categories
+</h3>
+
+<p>
+IT, networking, gaming, audio, electronics
+and selected medical equipment.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-location-dot"></i>
+
+</div>
+
+<h3>
+SHARJAH & UAE
+</h3>
+
+<p>
+Serving customers and businesses across
+Dubai and the UAE.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fab fa-whatsapp"></i>
+
+</div>
+
+<h3>
+Easy WhatsApp Contact
+</h3>
+
+<p>
+Contact us directly through WhatsApp for
+availability, details and quotations.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= DEALING CATEGORIES ================= -->
+
+<section class="section categories-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHAT <span>WE DEAL IN</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Explore our major equipment categories.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category-card">
+
+<div class="category-number">
+01
+</div>
+
+<i class="fas fa-computer"></i>
+
+<h3>
+IT Hardware
+</h3>
+
+<p>
+Desktop PCs, laptops, processors,
+RAM, storage, monitors and components.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+
+<div class="category-card">
+
+<div class="category-number">
+02
+</div>
+
+<i class="fas fa-network-wired"></i>
+
+<h3>
+Networking
+</h3>
+
+<p>
+Routers, switches, access points,
+servers and networking equipment.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+
+<div class="category-card">
+
+<div class="category-number">
+03
+</div>
+
+<i class="fas fa-gamepad"></i>
+
+<h3>
+Gaming
+</h3>
+
+<p>
+Gaming PCs, consoles, controllers,
+accessories and gaming hardware.
+</p>
+
+<a href="gaming.html">
+Explore Gaming
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+
+<div class="category-card">
+
+<div class="category-number">
+04
+</div>
+
+<i class="fas fa-volume-high"></i>
+
+<h3>
+Music & Sound
+</h3>
+
+<p>
+Speakers, amplifiers, mixers,
+microphones and PA sound systems.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= MISSION ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="mission-box">
+
+
+<div class="mission-icon">
+
+<i class="fas fa-bullseye"></i>
+
+</div>
+
+
+<div class="mission-content">
+
+<span>
+OUR MISSION
+</span>
+
+<h2>
+CREATING VALUE FROM
+<span>QUALITY EQUIPMENT</span>
+</h2>
+
+<p>
+Our mission is to connect buyers and sellers
+through a simple, convenient and professional
+process while giving equipment a new life and
+creating value for our customers.
+</p>
+
+</div>
+
+
+<a
+class="mission-btn"
+href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+Contact Us
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="final-cta">
+
+<div>
+
+<span>
+READY TO DEAL WITH US?
+</span>
+
+<h2>
+LET'S <strong>CONNECT</strong>
+</h2>
+
+<p>
+Have equipment to sell or looking for something?
+Contact IT Raza directly.
+</p>
+
+</div>
+
+
+<div class="cta-buttons">
+
+<a
+href="sell.html"
+class="cta-sell">
+
+<i class="fas fa-hand-holding-dollar"></i>
+
+Sell Items
+
+</a>
+
+
+<a
+href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20contact%20you."
+target="_blank"
+class="cta-wa">
+
+<i class="fab fa-whatsapp"></i>
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">IT <span>RAZA</span></div>
+        <p>SCRAP BUYERS</p>
+        <p style="margin-top:10px">We buy IT equipment, computer hardware, gaming gear, networking devices, print & sound systems across Sharjah & UAE.</p>
+        <div class="social">
+          <a href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+  
+      <div>
+        <h3>QUICK LINKS</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="item.html">Items</a>
+          <a href="gaming.html">Gaming</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+  
+      <div>
+        <h3>OUR SERVICES</h3>
+        <div class="footer-links">
+          <a href="item.html">IT Equipment</a>
+          <a href="item.html">Computer & Laptop</a>
+          <a href="item.html">Networking Devices</a>
+          <a href="item.html">Print & Accessories</a>
+          <a href="gaming.html">Gaming Gear</a>
+          <a href="item.html">Sound System</a>
+        </div>
+      </div>
+  
+      <div>
+        <h3>CONTACT US</h3>
+        <div class="contact-line"><i class="fab fa-whatsapp"></i> +971 50 413 4208</div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> Owaisrazascrap@gmail.com</div>
+        <div class="contact-line"><i class="fas fa-location-dot"></i>Sharjah, United Arab Emirates</div>
+        <div class="contact-line"><i class="fas fa-clock"></i> Time Monday to Sunday 9:00am to 11:00pm</div>
+      </div>
+    </div>
+  
+    <div class="container copyright">
+      <span>© 2026 IT Raza Scrap Buyers. All Rights Reserved.</span>
+      <span>Gaming Equipment Buyers • Sharjah & UAE</span>
+    </div>
+  </footer>
+  
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+class="float-wa"
+href="https://wa.me/971504134208"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- ================= TOP BUTTON ================= -->
+
+<a
+class="to-top"
+id="toTop"
+href="#">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+
+
+<!-- ================= EXTRA CSS ================= -->
+
+<style>
+
+/* WHY GRID */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:linear-gradient(145deg,#0b1b2e,#091523);
+    border:1px solid #213b55;
+    border-radius:18px;
+    padding:30px 25px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.why-card:before{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#facc1512;
+    right:-50px;
+    top:-50px;
+    transition:.5s;
+}
+
+.why-card:hover{
+    transform:translateY(-9px);
+    border-color:#facc15;
+    box-shadow:0 15px 40px #0005;
+}
+
+.why-card:hover:before{
+    transform:scale(2.5);
+}
+
+.why-icon{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+    display:grid;
+    place-items:center;
+    background:#facc1515;
+    color:#facc15;
+    font-size:1.5rem;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.why-card h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:#8fa3b7;
+    line-height:1.7;
+    font-size:.9rem;
+}
+
+
+/* CATEGORY */
+
+.categories-section{
+    background:#071524;
+    border-top:1px solid #172c41;
+    border-bottom:1px solid #172c41;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category-card{
+    position:relative;
+    padding:30px 22px;
+    min-height:300px;
+    background:#091827;
+    border:1px solid #213b55;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:#facc15;
+    box-shadow:0 18px 40px #0005;
+}
+
+.category-number{
+    position:absolute;
+    right:18px;
+    top:15px;
+    font-size:2rem;
+    font-weight:900;
+    color:#ffffff08;
+}
+
+.category-card > i{
+    color:#facc15;
+    font-size:2.3rem;
+    margin:15px 0 22px;
+}
+
+.category-card h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    color:#879caf;
+    line-height:1.65;
+    font-size:.86rem;
+    min-height:82px;
+}
+
+.category-card a{
+    color:#facc15;
+    font-weight:800;
+    font-size:.85rem;
+}
+
+.category-card a i{
+    margin-left:5px;
+    transition:.3s;
+}
+
+.category-card:hover a i{
+    transform:translateX(5px);
+}
+
+
+/* MISSION */
+
+.mission-box{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:25px;
+    padding:40px;
+    border-radius:22px;
+    background:
+    radial-gradient(circle at 10% 50%,#facc1510,transparent 35%),
+    linear-gradient(135deg,#0c2035,#102943);
+    border:1px solid #29465f;
+}
+
+.mission-icon{
+    width:75px;
+    height:75px;
+    display:grid;
+    place-items:center;
+    border-radius:20px;
+    background:#facc1518;
+    color:#facc15;
+    font-size:2rem;
+    animation:pulseIcon 2.5s infinite;
+}
+
+@keyframes pulseIcon{
+
+    0%,100%{
+        box-shadow:0 0 0 #facc1500;
+    }
+
+    50%{
+        box-shadow:0 0 30px #facc1535;
+    }
+
+}
+
+.mission-content > span{
+    color:#facc15;
+    font-weight:900;
+    letter-spacing:2px;
+    font-size:.8rem;
+}
+
+.mission-content h2{
+    margin:8px 0;
+    font-size:1.8rem;
+}
+
+.mission-content h2 span{
+    color:#facc15;
+}
+
+.mission-content p{
+    color:#9fb0c1;
+    line-height:1.7;
+}
+
+.mission-btn{
+    background:#25d366;
+    color:#fff;
+    padding:14px 22px;
+    border-radius:9px;
+    font-weight:900;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.mission-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px #25d36640;
+}
+
+
+/* FINAL CTA */
+
+.final-cta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    padding:42px;
+    border-radius:22px;
+    background:
+    linear-gradient(135deg,#facc1512,#25d36608),
+    #0b1b2e;
+    border:1px solid #304b64;
+}
+
+.final-cta > div:first-child > span{
+    color:#facc15;
+    font-size:.78rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.final-cta h2{
+    font-size:2.4rem;
+    margin:7px 0;
+}
+
+.final-cta h2 strong{
+    color:#facc15;
+}
+
+.final-cta p{
+    color:#91a5ba;
+}
+
+.cta-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.cta-sell,
+.cta-wa{
+    padding:14px 20px;
+    border-radius:9px;
+    font-weight:900;
+}
+
+.cta-sell{
+    background:#facc15;
+    color:#071321;
+}
+
+.cta-wa{
+    background:#25d366;
+    color:#fff;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#040c16;
+    border-top:4px solid #facc15;
+    margin-top:0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1.2fr;
+    gap:35px;
+    padding:45px 0;
+}
+
+.footer-logo{
+    font-size:1.7rem;
+    font-weight:900;
+}
+
+.footer-logo span{
+    color:#facc15;
+}
+
+.footer p,
+.footer a{
+    color:#8296aa;
+    line-height:1.7;
+}
+
+.footer h3{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:1rem;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.footer-links a:hover{
+    color:#facc15;
+}
+
+.contact-line{
+    margin:9px 0;
+    color:#a9b8c7;
+}
+
+.contact-line i{
+    color:#facc15;
+    width:22px;
+}
+
+.social{
+    display:flex;
+    gap:14px;
+    margin-top:16px;
+}
+
+.social a{
+    width:38px;
+    height:38px;
+    border:1px solid #314960;
+    color:#dbe7f3;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+}
+
+.social a:hover{
+    color:#facc15;
+    border-color:#facc15;
+}
+
+.copyright{
+    border-top:1px solid #1a2d41;
+    padding:17px 0;
+    color:#71859a;
+    font-size:.85rem;
+    display:flex;
+    justify-content:space-between;
+}
+
+
+/* FLOAT WHATSAPP */
+
+.float-wa{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:900;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-size:1.8rem;
+    box-shadow:0 8px 25px #0006;
+    animation:waPulse 2s infinite;
+}
+
+@keyframes waPulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+
+/* TOP */
+
+.to-top{
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    z-index:900;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#facc15;
+    color:#071321;
+    display:grid;
+    place-items:center;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+}
+
+.to-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* TABLET */
+
+@media(max-width:1050px){
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mission-box{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .mission-icon{
+        margin:auto;
+    }
+
+    .mission-btn{
+        justify-self:center;
+    }
+
+    .final-cta{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:550px){
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        flex-direction:column;
+        gap:7px;
+    }
+
+    .final-cta{
+        padding:28px 22px;
+    }
+
+    .final-cta h2{
+        font-size:2rem;
+    }
+
+    .cta-buttons{
+        width:100%;
+    }
+
+    .cta-sell,
+    .cta-wa{
+        flex:1;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* ================= COUNTERS ================= */
+
+const counters =
+document.querySelectorAll(".counter");
+
+const counterObserver =
+new IntersectionObserver((entries,observer)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=
+parseInt(counter.dataset.target);
+
+let current=0;
+
+const speed=20;
+
+const update=()=>{
+
+const increment=
+Math.max(1,Math.ceil(target/70));
+
+current+=increment;
+
+if(current>=target){
+
+counter.textContent=target;
+
+}else{
+
+counter.textContent=current;
+
+requestAnimationFrame(update);
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+},{
+threshold:.5
+});
+
+
+counters.forEach(counter=>{
+counterObserver.observe(counter);
+});
+
+
+
+/* ================= SCROLL TOP ================= */
+
+const toTop=
+document.getElementById("toTop");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>450){
+
+toTop.classList.add("show");
+
+}else{
+
+toTop.classList.remove("show");
+
+}
+
+});
+
+
+toTop.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealElements=
+document.querySelectorAll(
+".why-card,.category-card,.story-content,.story-image,.mission-box,.final-cta"
+);
+
+
+const revealObserver=
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("reveal-show");
+
+}
+
+});
+
+},{
+threshold:.12
+});
+
+
+revealElements.forEach(el=>{
+
+el.classList.add("reveal");
+
+revealObserver.observe(el);
+
+});
+
+</script>
+
+
+<style>
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal-show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Raza | Items - Buy & Sell Dubai</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#06111f;color:#eaf1f8}
+a{text-decoration:none}
+.container{width:min(1250px,92%);margin:auto}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(5,17,31,.98);border-bottom:1px solid #19314b;box-shadow:0 5px 25px rgba(0,0,0,.35)}
+.header-flex{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:1.75rem;font-weight:900;color:#fff}.logo span{color:#facc15}
+.logo small{display:block;font-size:.62rem;letter-spacing:2.4px;color:#9fb0c3;font-weight:500}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:#d9e3ee;font-weight:600;padding:28px 0 22px;border-bottom:3px solid transparent;transition:.25s}
+nav a:hover,nav a.active{color:#facc15;border-bottom-color:#facc15}
+.top-wa{background:#25d366;color:#fff;padding:12px 18px;border-radius:8px;font-weight:800;white-space:nowrap}
+
+.back-row{padding:22px 0 5px}.back-btn{display:inline-flex;align-items:center;gap:8px;color:#dbe7f3;border:1px solid #38506a;padding:9px 15px;border-radius:9px}.back-btn:hover{border-color:#facc15;color:#facc15}
+
+.hero{padding:55px 0 60px;background:radial-gradient(circle at 80% 40%,rgba(38,89,160,.22),transparent 35%),linear-gradient(135deg,#06111f,#0a1d33 55%,#07111e)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.badge{display:inline-block;border:1px solid #facc15;color:#facc15;padding:7px 13px;border-radius:30px;font-weight:700;font-size:.82rem;margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.03;text-transform:uppercase}.hero h1 span{color:#facc15}
+.hero p{font-size:1.05rem;color:#aebdcd;line-height:1.8;margin:20px 0}
+.hero-image{min-height:350px;border-radius:24px;background:url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85") center/cover;border:1px solid #25415e;box-shadow:0 0 45px rgba(20,77,135,.22)}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}.hero-btn{padding:14px 20px;border-radius:9px;font-weight:800}.buy{background:#25d366;color:#fff}.sell{background:#facc15;color:#071321}
+
+.section{padding:65px 0}.section-title{text-align:center;margin-bottom:35px}.section-title h2{font-size:2.35rem}.section-title h2 span{color:#facc15}.section-title p{color:#91a5ba;margin-top:8px}.title-line{width:85px;height:4px;background:#facc15;margin:15px auto;border-radius:5px}
+
+.category-title{display:flex;align-items:center;gap:12px;margin:40px 0 20px}.category-title h2{font-size:1.7rem}.category-title i{color:#facc15}.category-title span{height:2px;background:#263d55;flex:1}
+
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#0b1b2e,#091523);border:1px solid #213b55;border-radius:16px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#facc15;box-shadow:0 15px 35px rgba(0,0,0,.28)}
+.card-img{height:190px;background:#071321;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}.card:hover img{transform:scale(1.05)}
+.card-body{padding:17px}.card h3{font-size:1.03rem;margin-bottom:7px}.tag{display:inline-block;color:#facc15;border:1px solid rgba(250,204,21,.4);padding:4px 8px;border-radius:20px;font-size:.7rem;font-weight:700;margin:7px 0}
+.card p{font-size:.86rem;color:#91a5ba;line-height:1.5;min-height:55px}
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.action{padding:10px 5px;border-radius:8px;text-align:center;font-size:.82rem;font-weight:800}
+.buy-btn{background:#25d366;color:#fff}.sell-btn{border:1px solid #facc15;color:#facc15}.sell-btn:hover{background:#facc15;color:#071321}
+
+.notice{margin-top:35px;padding:20px;border:1px solid #29465f;border-radius:14px;background:#0b1b2e;color:#a9b8c7;line-height:1.7}
+.notice strong{color:#facc15}
+
+.cta{margin-top:45px;background:linear-gradient(135deg,#0d2035,#102a45);border:1px solid #29465f;border-radius:22px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta h2{font-size:2rem}.cta h2 span{color:#facc15}.cta p{color:#a8b8c9;margin-top:7px}.cta-wa{background:#25d366;color:#fff;padding:15px 24px;border-radius:9px;font-weight:900;white-space:nowrap}
+
+footer{background:#040c16;border-top:4px solid #facc15;margin-top:60px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:35px;padding:45px 0}.footer-logo{font-size:1.7rem;font-weight:900}.footer-logo span{color:#facc15}
+.footer p,.footer-links a{color:#8296aa;line-height:1.7}.footer h3{color:#fff;margin-bottom:15px;font-size:1rem}
+.footer-links{display:flex;flex-direction:column;gap:8px}.footer-links a:hover{color:#facc15}
+.contact-line{margin:9px 0;color:#a9b8c7}.contact-line i{color:#facc15;width:22px}
+.social{display:flex;gap:14px;margin-top:16px}.social a{width:38px;height:38px;border:1px solid #314960;color:#dbe7f3;border-radius:50%;display:grid;place-items:center}.social a:hover{color:#facc15;border-color:#facc15}
+.copyright{border-top:1px solid #1a2d41;padding:17px 0;color:#71859a;font-size:.85rem;display:flex;justify-content:space-between;gap:15px}
+
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:900;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.8rem;box-shadow:0 8px 25px rgba(0,0,0,.35)}
+.to-top{position:fixed;right:20px;bottom:90px;z-index:900;width:42px;height:42px;border-radius:50%;background:#facc15;color:#071321;display:grid;place-items:center;font-weight:900;opacity:0;pointer-events:none;transition:.25s}.to-top.show{opacity:1;pointer-events:auto}
+
+@media(max-width:1050px){.products{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.header-flex{flex-direction:column;padding:15px 0}nav{gap:15px;flex-wrap:wrap;justify-content:center}nav a{padding:5px 0}.top-wa{display:none}.hero-grid{grid-template-columns:1fr}.hero-image{min-height:280px}.products{grid-template-columns:repeat(2,1fr)}.cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:500px){.products{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.copyright{flex-direction:column}.hero h1{font-size:2.6rem}}
+/* ================= E-WASTE BUYERS ================= */
+
+.ewaste-card{
+    margin:50px auto 0;
+    width:100%;
+    max-width:1150px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b1f36,
+        #071321
+    );
+
+    border:1px solid #294762;
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+    transition:.4s;
+}
+
+.ewaste-card:hover{
+    transform:translateY(-7px);
+    border-color:#facc15;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.5);
+}
+
+
+/* IMAGE */
+
+.ewaste-image{
+    position:relative;
+    min-height:430px;
+    overflow:hidden;
+}
+
+.ewaste-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:
+    transform .7s ease;
+}
+
+.ewaste-card:hover .ewaste-image img{
+    transform:scale(1.07);
+}
+
+
+/* DARK OVERLAY */
+
+.ewaste-image::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(0,0,0,.75)
+    );
+}
+
+
+/* BADGE */
+
+.ewaste-badge{
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    z-index:2;
+
+    background:#facc15;
+    color:#071321;
+
+    padding:10px 15px;
+
+    border-radius:30px;
+
+    font-size:.78rem;
+    font-weight:900;
+
+    letter-spacing:.5px;
+}
+
+.ewaste-badge i{
+    margin-right:6px;
+}
+
+
+/* CONTENT */
+
+.ewaste-content{
+    padding:45px 40px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.ewaste-content h2{
+    font-size:2.4rem;
+    margin-bottom:18px;
+}
+
+.ewaste-content h2 span{
+    color:#facc15;
+}
+
+.ewaste-content p{
+    color:#9fb0c2;
+    line-height:1.75;
+    font-size:.94rem;
+    margin-bottom:14px;
+}
+
+
+/* POINTS */
+
+.ewaste-points{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+
+    margin:15px 0 25px;
+}
+
+.ewaste-points div{
+    color:#d9e4ef;
+    font-size:.84rem;
+    font-weight:700;
+}
+
+.ewaste-points i{
+    color:#25d366;
+    margin-right:6px;
+}
+
+
+/* BUTTONS */
+
+.ewaste-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.ewaste-wa,
+.ewaste-more{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:13px 19px;
+
+    border-radius:9px;
+
+    font-weight:900;
+
+    transition:.25s;
+}
+
+
+/* WHATSAPP */
+
+.ewaste-wa{
+    background:#25d366;
+    color:#fff;
+}
+
+.ewaste-wa:hover{
+    background:#1da851;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px #25d36640;
+}
+
+
+/* VIEW ITEMS */
+
+.ewaste-more{
+    background:transparent;
+    color:#dce7f2;
+
+    border:1px solid #3b5870;
+}
+
+.ewaste-more:hover{
+    color:#facc15;
+    border-color:#facc15;
+    transform:translateY(-3px);
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:850px){
+
+    .ewaste-card{
+        grid-template-columns:1fr;
+    }
+
+    .ewaste-image{
+        min-height:320px;
+    }
+
+    .ewaste-content{
+        padding:35px 28px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:550px){
+
+    .ewaste-card{
+        border-radius:18px;
+    }
+
+    .ewaste-image{
+        min-height:250px;
+    }
+
+    .ewaste-content{
+        padding:28px 20px;
+    }
+
+    .ewaste-content h2{
+        font-size:2rem;
+    }
+
+    .ewaste-points{
+        grid-template-columns:1fr;
+    }
+
+    .ewaste-buttons{
+        flex-direction:column;
+    }
+
+    .ewaste-wa,
+    .ewaste-more{
+        width:100%;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header-flex">
+<a href="index.html" class="logo">IT <span>RAZA</span><small>SCRAP BUYERS</small></a>
+<nav>
+<a href="index.html">Home</a>
+<a href="item.html" class="active">Items</a>
+<a href="sell.html">BUYER</a> 
+<a href="gaming.html">Gaming</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+<a class="top-wa" href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+</div>
+</header>
+
+<div class="container back-row">
+<a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+</div>
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">SHARJAH & UAE • BUY </span>
+<h1>WE BUY</h1>
+<p>IT equipment, computer hardware, office electronics, music & sound systems, and general medical & surgical equipment. Send us photos, model and quantity on WhatsApp for a quote.</p>
+<div class="hero-buttons">
+<a class="hero-btn buy" href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20sell%20items." target="_blank"><i class="fab fa-whatsapp"></i> Sell To Us</a>
+</div>
+</div>
+<div class="hero-image"></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>OUR <span>ITEMS</span></h2>
+<div class="title-line"></div>
+<p>Real product categories • Buy & Sell • Single items or bulk stock</p>
+</div>
+
+<!-- IT HARDWARE -->
+<div class="category-title" id="it"><i class="fas fa-microchip"></i><h2>IT Hardware & Computers</h2><span></span></div>
+<div class="products">
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=85" alt="Desktop PC"></div><div class="card-body"><h3>Desktop PCs & Workstations</h3><span class="tag">COMPUTERS</span><p>Office PCs, workstations, towers, branded desktops and complete systems.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Desktop%20PCs." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85" alt="Laptop"></div><div class="card-body"><h3>Laptops & Notebooks</h3><span class="tag">LAPTOPS</span><p>Business laptops, notebooks and complete laptop lots from different brands.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Laptops." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=900&q=85" alt="Graphics Card"></div><div class="card-body"><h3>CPU / GPU / Graphics Cards</h3><span class="tag">PROCESSORS</span><p>Intel, AMD processors and NVIDIA/AMD graphics cards, various generations.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20CPU%20or%20GPU." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85" alt="Motherboard"></div><div class="card-body"><h3>Motherboards</h3><span class="tag">PC PARTS</span><p>Desktop, workstation and gaming motherboards for different platforms.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Motherboards." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=900&q=85" alt="RAM"></div><div class="card-body"><h3>RAM / Memory</h3><span class="tag">DDR3 / DDR4 / DDR5</span><p>Desktop and laptop memory modules, single sticks and bulk lots.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20RAM." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85" alt="SSD HDD"></div><div class="card-body"><h3>SSD / HDD / NVMe</h3><span class="tag">STORAGE</span><p>Internal, external, SATA, NVMe SSDs and HDD storage drives.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20SSD%20or%20HDD." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?auto=format&fit=crop&w=900&q=85" alt="Power Supply"></div><div class="card-body"><h3>Power Supply / PSU</h3><span class="tag">PC POWER</span><p>ATX power supplies, modular and non-modular units and bulk stock.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20PSU." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?auto=format&fit=crop&w=900&q=85" alt="Computer Monitor"></div><div class="card-body"><h3>Monitors / LCD / LED</h3><span class="tag">DISPLAYS</span><p>Office monitors, LED/LCD screens and high-refresh displays.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Monitors." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+</div>
+</div>
+
+<!-- ================= E-WASTE BUYERS CARD ================= -->
+
+<div class="ewaste-card">
+
+    <div class="ewaste-image">
+
+        <img
+        src="e waste of cpu.jpg"
+        alt="E-Waste Buyers">
+
+        <div class="ewaste-badge">
+            <i class="fas fa-recycle"></i>
+            E-WASTE BUYERS
+        </div>
+
+    </div>
+
+
+    <div class="ewaste-content">
+
+        <h2>
+            E-Waste <span>Buyers</span>
+        </h2>
+
+        <p>
+            Looking for reliable e-waste buyers in Dubai and UAE?
+            We buy old computers, laptops, servers, networking
+            equipment, electronic parts and other IT scrap.
+        </p>
+
+        <p>
+            Whether you are a business upgrading your IT assets
+            or an individual with old electronics, IT Raza provides
+            a simple and professional way to sell your electronic
+            waste responsibly.
+        </p>
+
+
+        <div class="ewaste-points">
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                IT & Electronic Scrap
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Computers & Laptops
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Servers & Networking
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Quick WhatsApp Response
+            </div>
+
+        </div>
+
+
+        <div class="ewaste-buttons">
+
+            <a
+            href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20sell%20E-Waste."
+            target="_blank"
+            class="ewaste-wa">
+
+                <i class="fab fa-whatsapp"></i>
+                Sell E-Waste
+
+            </a>
+
+
+            <a
+            href="sell.html"
+            class="ewaste-more">
+
+                <i class="fas fa-arrow-right"></i>
+                View Sell Items
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- NETWORKING -->
+ 
+<div class="category-title" id="network"><i class="fas fa-network-wired"></i><h2>Networking & IT Equipment</h2><span></span></div>
+<div class="products">
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85" alt="Server"></div><div class="card-body"><h3>Servers & Server Parts</h3><span class="tag">SERVERS</span><p>Rack servers, tower servers, server RAM, drives and spare components.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Servers." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="routers.jpg" alt="Network Router"></div><div class="card-body"><h3>Routers & Wi-Fi Devices</h3><span class="tag">NETWORKING</span><p>Business routers, Wi-Fi routers, access points and network equipment.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Routers%20or%20WiFi%20Devices." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="networ swtiches.jpg" alt="Network Switch"></div><div class="card-body"><h3>Network Switches</h3><span class="tag">SWITCHES</span><p>Managed, unmanaged, PoE and enterprise network switches.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Network%20Switches." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=900&q=85" alt="Network cables"></div><div class="card-body"><h3>Network Cables & Accessories</h3><span class="tag">CABLES</span><p>Ethernet cables, patch panels, connectors, racks and networking accessories.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Network%20Cables." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+</div>
+
+<!-- PRINT & OFFICE -->
+<div class="category-title"><i class="fas fa-print"></i><h2>Printers & Office Electronics</h2><span></span></div>
+<div class="products">
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=85" alt="Printer"></div><div class="card-body"><h3>Printers</h3><span class="tag">LASER / INKJET</span><p>Laser, inkjet and office printers from different manufacturers.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Printers." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="office it equipment.jpg" alt="Office equipment"></div><div class="card-body"><h3>Office IT Equipment</h3><span class="tag">OFFICE</span><p>Office electronics, accessories and surplus IT equipment.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Office%20IT%20Equipment." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+<!-- MEDIA EQUIPMENT -->
+<div class="card">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85"
+             alt="Media Equipment">
+    </div>
+
+    <div class="card-body">
+        <h3>Media Equipment</h3>
+
+        <span class="tag">MEDIA EQUIPMENT</span>
+
+        <p>
+            Professional media equipment,
+            production equipment and electronic
+            media accessories.
+        </p>
+
+        <div class="action-row">
+            <a class="action buy-btn"
+               href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Media%20Equipment."
+               target="_blank">
+                Sell <i class="fab fa-whatsapp"></i>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- CAMERAS -->
+<div class="card">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85"
+             alt="Professional Camera">
+    </div>
+
+    <div class="card-body">
+        <h3>Cameras</h3>
+
+        <span class="tag">CAMERAS</span>
+
+        <p>
+            DSLR cameras, mirrorless cameras,
+            professional cameras, lenses and
+            camera accessories.
+        </p>
+
+        <div class="action-row">
+            <a class="action buy-btn"
+               href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Cameras."
+               target="_blank">
+                Sell <i class="fab fa-whatsapp"></i>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- PROJECTORS -->
+<div class="card">
+    <div class="card-img">
+        <img src="projector.jpg"
+             alt="Projector">
+    </div>
+
+    <div class="card-body">
+        <h3>Projectors</h3>
+
+        <span class="tag">PROJECTORS</span>
+
+        <p>
+            Business projectors, classroom projectors,
+            home cinema projectors and presentation
+            equipment.
+        </p>
+
+        <div class="action-row">
+            <a class="action buy-btn"
+               href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Projectors."
+               target="_blank">
+                Sell <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!-- MUSIC & SOUND -->
+<div class="category-title" id="music"><i class="fas fa-volume-high"></i><h2>Music & Sound Systems</h2><span></span></div>
+<div class="products">
+
+<div class="card"><div class="card-img"><img src="speakers and pa system.jpg" alt="Speakers"></div><div class="card-body"><h3>Speakers & PA Systems</h3><span class="tag">SOUND</span><p>Active/passive speakers, PA systems, cabinets and professional audio equipment.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Speakers%20or%20PA%20System." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85" alt="DJ equipment"></div><div class="card-body"><h3>DJ & Studio Equipment</h3><span class="tag">MUSIC</span><p>DJ controllers, studio equipment, audio interfaces and related accessories.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20DJ%20or%20Studio%20Equipment." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="musical instruments.jpg" alt="Musical instruments"></div><div class="card-body"><h3>Musical Instruments</h3><span class="tag">INSTRUMENTS</span><p>Selected electronic and musical instruments, subject to inspection.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Musical%20Instruments." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+<div class="card" data-cat="music"><div class="card-img"><img src="mixers and amplifiers.jpg" alt="Mixer"></div><div class="card-body"><h3>Mixers & Amplifiers</h3><span class="tag">PRO AUDIO</span><p>Audio mixers, amplifiers, receivers and sound equipment.</p>
+<div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Musical%20Instruments." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+</div>
+
+<!-- MEDICAL & SURGICAL EQUIPMENT -->
+<div class="category-title" id="medical"><i class="fas fa-hospital"></i><h2>Medical & Surgical Equipment</h2><span></span></div>
+<div class="products">
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85" alt="Medical equipment"></div><div class="card-body"><h3>Medical Equipment</h3><span class="tag">MEDICAL</span><p>General non-drug medical equipment, devices and clinic equipment, subject to applicable rules.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Medical%20Equipment." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="patient monitors and devices.jpg" alt="Medical monitor"></div><div class="card-body"><h3>Patient Monitors & Devices</h3><span class="tag">CLINICAL</span><p>Non-drug patient monitoring and clinical devices, subject to inspection and local requirements.</p><div class="action-row"><a class="action buy-btn" href="https://wa.me/971504134208?text=I%20want%20to%20sell%20Patient%20Monitors%20or%20Clinical%20Devices." target="_blank">Sell <i class="fab fa-whatsapp"></i></a></a></div></div></div>
+
+</div>
+
+<div class="notice">
+<strong>Important:</strong> Medical and surgical items are accepted only where legally permitted and subject to inspection, condition, documentation and applicable UAE requirements. Medicines, controlled substances and restricted products are not listed here.
+</div>
+
+<div class="cta">
+<div>
+<h2>HAVE ITEMS TO <span>BUY OR SELL?</span></h2>
+<p>Send product photos, model, condition and quantity on WhatsApp for a quick quote.</p>
+</div>
+<a class="cta-wa" href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20a%20quote%20for%20items." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container footer-grid">
+
+<div>
+<div class="footer-logo">IT <span>RAZA</span></div>
+<p>SCRAP BUYERS</p>
+<p style="margin-top:10px">IT equipment, hardware, networking, music & sound systems, gaming gear and selected medical equipment across Sharjah & UAE.</p>
+<div class="social">
+<a href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+
+<div>
+<h3>QUICK LINKS</h3>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="item.html">Items</a>
+<a href="sell.html">Sell</a> 
+<a href="gaming.html">Gaming</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+
+<div>
+<h3>CATEGORIES</h3>
+<div class="footer-links">
+<a href="#it">IT Hardware</a>
+<a href="#network">Networking</a>
+<a href="#music">Music & Sound</a>
+<a href="#medical">Medical & Surgical</a>
+</div>
+</div>
+
+<div>
+<h3>CONTACT US</h3>
+<div class="contact-line"><i class="fab fa-whatsapp"></i> +971 50 413 4208</div>
+<div class="contact-line"><i class="fas fa-envelope"></i> Owaisrazascrap@gmail.com</div>
+<div class="contact-line"><i class="fas fa-location-dot"></i> Sharjah, United Arab Emirates</div>
+<div class="contact-line"><i class="fas fa-clock"></i> Time Monday to Sunday 9:00am to 11:00pm</div>
+</div>
+
+</div>
+
+<div class="container copyright">
+<span>© 2026 IT Raza Scrap Buyers. All Rights Reserved.</span>
+<span>Buy & Sell • Dubai & UAE</span>
+</div>
+</footer>
+
+<a class="to-top" id="toTop" href="#"><i class="fas fa-arrow-up"></i></a>
+<a class="float-wa" href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+const toTop=document.getElementById("toTop");
+window.addEventListener("scroll",()=>{
+toTop.classList.toggle("show",window.scrollY>450);
+});
+toTop.addEventListener("click",(e)=>{
+e.preventDefault();
+window.scrollTo({top:0,behavior:"smooth"});
+});
+</script>
+
+</body>
+</html>
