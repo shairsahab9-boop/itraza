@@ -113,7 +113,30 @@ nav a.active{
 
 
 /* ================= BACK BUTTON ================= */
+.back-row {
+    padding: 20px 0;
+}
 
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0b1b2e;
+    color: #fff;
+    border: 1px solid #304b64;
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.back-btn i {
+    color: #facc15;
+}
+
+.back-btn:hover {
+    background: #facc15;
+    color: #071321;
+}
 .back-row{
     padding:22px 0 5px;
 }
@@ -764,7 +787,94 @@ nav a.active{
     }
 
 }
+/* ===== MOBILE MENU ===== */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+
+    header {
+        padding: 8px 0;
+    }
+
+    .header-flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text strong {
+        font-size: 21px;
+    }
+
+    .logo-text small {
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #06101f;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 1000;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 10px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .contact-highlight {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 30px;
+        padding: 18px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-preview-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 </style>
 </head>
 
@@ -774,62 +884,33 @@ nav a.active{
 <!-- ================= HEADER ================= -->
 
 <header>
+    <div class="container header-flex">
 
-<div class="container header-flex">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Raza IT Recycling Logo">
 
-<a href="index.html" class="logo">
-
-IT <span>RAZA</span>
-
-<small>SCRAP BUYERS</small>
-
-</a>
-
-
-<nav>
-
-<a href="index.html">
-Home
-</a>
-
-<a href="item.html">
-Items
-</a>
-
-<a href="sell.html">
-Buyer
-</a>
-
-<a href="gaming.html">
-Gaming
-</a>
-
-<a href="about.html" class="active">
-About
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-</nav>
-
-
-<a
-class="top-wa"
-href="https://wa.me/971504134208"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-WhatsApp Us
-
-</a>
-
+            <div class="logo-text">
+                <strong>IT <span>RAZA</span></strong>
+                <small>SCRAP BUYERS</small>
+            </div>
+        </div>
+<div class="container back-row">
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+    </a>
 </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="item.html">Items</a>
+            <a href="sell.html">Buyer</a>
+            <a href="gaming.html">Gaming</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
+    </div>
 </header>
-
-
 
 <!-- ================= BACK ================= -->
 
@@ -2281,7 +2362,11 @@ revealObserver.observe(el);
 }
 
 </style>
-
-
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("show");
+}
+</script>
 </body>
 </html>
