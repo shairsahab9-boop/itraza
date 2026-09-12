@@ -5,10 +5,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IT Raza | About Us</title>
+<!-- SEO -->
+<title>About IT Raza | IT Scrap Buyers & E-Waste Recycling UAE</title>
 
+<meta name="description" content="Learn about IT Raza, a UAE IT scrap buyer dealing in computers, laptops, servers, networking equipment, gaming gear, electronics and e-waste across Sharjah, Dubai and the UAE.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://itrazarecycling.com/about.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="About IT Raza | IT Scrap Buyers & E-Waste Recycling UAE">
+<meta property="og:description" content="Learn about IT Raza, an IT scrap buyer and e-waste recycling business serving Sharjah, Dubai and customers across the UAE.">
+<meta property="og:url" content="https://itrazarecycling.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IT Raza Scrap Buyers">
+<meta property="og:image" content="https://itrazarecycling.com/logo.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About IT Raza | IT Scrap Buyers UAE">
+<meta name="twitter:description" content="IT Raza buys IT equipment, electronic scrap and e-waste across Sharjah and the UAE.">
+<meta name="twitter:image" content="https://itrazarecycling.com/logo.png">
+
+<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About IT Raza Scrap Buyers",
+    "url": "https://itrazarecycling.com/about.html",
+    "description": "About IT Raza, an IT scrap buyer and e-waste recycling business serving Sharjah, Dubai and the UAE.",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "IT Raza Scrap Buyers",
+        "url": "https://itrazarecycling.com/"
+    },
+    "about": {
+        "@type": "LocalBusiness",
+        "name": "IT Raza Scrap Buyers",
+        "url": "https://itrazarecycling.com/",
+        "telephone": "+971504134208",
+        "email": "Owaisrazascrap@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sharjah",
+            "addressCountry": "AE"
+        },
+        "areaServed": [
+            {
+                "@type": "Country",
+                "name": "United Arab Emirates"
+            },
+            {
+                "@type": "City",
+                "name": "Sharjah"
+            },
+            {
+                "@type": "City",
+                "name": "Dubai"
+            },
+            {
+                "@type": "City",
+                "name": "Abu Dhabi"
+            }
+        ]
+    }
+}
+</script>
 
 <style>
 
@@ -50,6 +118,7 @@ header{
     border-bottom:1px solid #213a54;
     box-shadow:0 5px 25px #0006;
 }
+
 .header-flex{
     min-height:78px;
     display:flex;
@@ -90,10 +159,12 @@ header{
     color:#9fb0c3;
     margin-top:2px;
 }
+
 nav{
     display:flex;
     gap:22px;
     align-items:center;
+    background:#06111f;
 }
 
 nav a{
@@ -109,9 +180,7 @@ nav a.active{
     color:#facc15;
     border-color:#facc15;
 }
-nav{
-    background:#06111f;
-}
+
 .top-wa{
     background:#25d366;
     color:#fff;
@@ -125,58 +194,22 @@ nav{
     transform:translateY(-3px);
     box-shadow:0 8px 25px #25d36655;
 }
-@media(max-width:700px){
 
-    .header-flex{
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-        padding:8px 0;
-    }
 
-    .logo img{
-        width:55px;
-        height:55px;
-    }
+/* ================= MOBILE MENU ================= */
 
-    .logo-text strong{
-        font-size:21px;
-    }
-
-    .logo-text small{
-        font-size:8px;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
+.menu-toggle{
+    display:none;
+    background:transparent;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
 }
+
 
 /* ================= BACK BUTTON ================= */
-.back-row {
-    padding: 20px 0;
-}
 
-.back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #0b1b2e;
-    color: #fff;
-    border: 1px solid #304b64;
-    padding: 10px 18px;
-    border-radius: 9px;
-    font-weight: 700;
-}
-
-.back-btn i {
-    color: #facc15;
-}
-
-.back-btn:hover {
-    background: #facc15;
-    color: #071321;
-}
 .back-row{
     padding:22px 0 5px;
 }
@@ -190,6 +223,10 @@ nav{
     padding:9px 15px;
     border-radius:9px;
     transition:.3s;
+}
+
+.back-btn i{
+    color:#facc15;
 }
 
 .back-btn:hover{
@@ -213,9 +250,6 @@ nav{
     radial-gradient(circle at 20% 80%,#2672ff18,transparent 30%),
     linear-gradient(135deg,#06111f,#0a1d33 55%,#07111e);
 }
-
-
-/* GLOWING CIRCLES */
 
 .about-hero:before{
     content:"";
@@ -242,7 +276,6 @@ nav{
 }
 
 @keyframes rotateGlow{
-
     from{
         transform:rotate(0deg) scale(1);
     }
@@ -254,11 +287,7 @@ nav{
     to{
         transform:rotate(360deg) scale(1);
     }
-
 }
-
-
-/* HERO GRID */
 
 .hero-grid{
     width:min(1250px,92%);
@@ -276,7 +305,7 @@ nav{
 }
 
 
-/* BADGE */
+/* ================= BADGE ================= */
 
 .badge{
     display:inline-block;
@@ -305,17 +334,14 @@ nav{
     50%{
         box-shadow:0 0 25px #facc1540;
     }
-
 }
 
 
-/* HERO TEXT */
+/* ================= HERO TEXT ================= */
 
 .hero-text h1{
     font-size:clamp(2.7rem,6vw,5.2rem);
-
     line-height:1;
-
     font-weight:950;
 }
 
@@ -325,18 +351,14 @@ nav{
 
 .hero-text p{
     color:#aebdcd;
-
     font-size:1.05rem;
-
     line-height:1.9;
-
     margin:24px 0;
-
     max-width:650px;
 }
 
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 
 .hero-btns{
     display:flex;
@@ -347,33 +369,23 @@ nav{
 .primary-btn{
     background:#facc15;
     color:#071321;
-
     padding:14px 22px;
-
     border-radius:9px;
-
     font-weight:900;
-
     transition:.3s;
 }
 
 .primary-btn:hover{
     transform:translateY(-4px);
-
     box-shadow:0 12px 30px #facc1540;
 }
 
 .secondary-btn{
     border:1px solid #38506a;
-
     color:#eaf1f8;
-
     padding:14px 22px;
-
     border-radius:9px;
-
     font-weight:800;
-
     transition:.3s;
 }
 
@@ -387,17 +399,11 @@ nav{
 
 .hero-visual{
     height:430px;
-
     position:relative;
-
     display:flex;
-
     align-items:center;
     justify-content:center;
 }
-
-
-/* MAIN CIRCLE */
 
 .visual-circle{
     width:320px;
@@ -411,7 +417,6 @@ nav{
     radial-gradient(circle,#facc1518,transparent 65%);
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -426,15 +431,11 @@ nav{
 
 .visual-circle i{
     font-size:7rem;
-
     color:#facc15;
 
     filter:
     drop-shadow(0 0 25px #facc1580);
 }
-
-
-/* ORBIT */
 
 .orbit{
     position:absolute;
@@ -465,15 +466,11 @@ nav{
     left:50%;
 }
 
-
 @keyframes spin{
-
     to{
         transform:rotate(360deg);
     }
-
 }
-
 
 @keyframes float{
 
@@ -484,7 +481,6 @@ nav{
     50%{
         transform:translateY(-15px);
     }
-
 }
 
 
@@ -501,10 +497,7 @@ nav{
 
 .stats-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
 
@@ -528,23 +521,18 @@ nav{
 
 .stat i{
     font-size:1.7rem;
-
     color:#facc15;
-
     margin-bottom:10px;
 }
 
 .stat h2{
     font-size:2.2rem;
-
     color:#fff;
 }
 
 .stat p{
     color:#8498ac;
-
     font-size:.85rem;
-
     margin-top:5px;
 }
 
@@ -557,7 +545,6 @@ nav{
 
 .section-title{
     text-align:center;
-
     margin-bottom:50px;
 }
 
@@ -582,11 +569,8 @@ nav{
 
 .section-title p{
     color:#91a5ba;
-
     max-width:650px;
-
     margin:auto;
-
     line-height:1.7;
 }
 
@@ -595,12 +579,8 @@ nav{
 
 .story-grid{
     display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:50px;
-
     align-items:center;
 }
 
@@ -624,9 +604,6 @@ nav{
     0 20px 60px #0005;
 }
 
-
-/* IMAGE SHINE */
-
 .story-image:after{
     content:"";
 
@@ -648,17 +625,13 @@ nav{
 }
 
 @keyframes shine{
-
     to{
         transform:translateX(100%);
     }
-
 }
-
 
 .story-content h2{
     font-size:2.2rem;
-
     margin-bottom:18px;
 }
 
@@ -668,27 +641,20 @@ nav{
 
 .story-content p{
     color:#9eafc1;
-
     line-height:1.85;
-
     margin-bottom:16px;
 }
 
 .story-list{
     margin-top:20px;
-
     display:grid;
-
     gap:12px;
 }
 
 .story-list div{
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     color:#dce6ef;
 }
 
@@ -697,1044 +663,7 @@ nav{
 }
 
 
-/* ================= MOBILE HEADER ================= */
-
-@media(max-width:1050px){
-
-    nav{
-        gap:14px;
-    }
-
-    nav a{
-        font-size:.9rem;
-    }
-
-    .hero-grid{
-        gap:30px;
-    }
-
-}
-
-
-/* ================= TABLET ================= */
-
-@media(max-width:800px){
-
-    .header-flex{
-        flex-direction:column;
-
-        padding:15px 0;
-    }
-
-    nav{
-        gap:15px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    nav a{
-        padding:5px 0;
-    }
-
-    .top-wa{
-        display:none;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-        padding:60px 0;
-    }
-
-    .hero-text p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-btns{
-        justify-content:center;
-    }
-
-    .stats-grid{
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .stat:nth-child(2){
-        border-right:0;
-    }
-
-    .story-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* ================= MOBILE ================= */
-
-@media(max-width:550px){
-
-    .about-hero{
-        min-height:auto;
-    }
-
-    .hero-text h1{
-        font-size:2.8rem;
-    }
-
-    .hero-visual{
-        height:340px;
-    }
-
-    .visual-circle{
-        width:240px;
-        height:240px;
-    }
-
-    .visual-circle i{
-        font-size:5rem;
-    }
-
-    .orbit{
-        width:285px;
-        height:285px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr;
-    }
-
-    .stat{
-        border-right:0;
-        border-bottom:1px solid #213a54;
-    }
-
-    .stat:last-child{
-        border-bottom:0;
-    }
-
-    .section{
-        padding:60px 0;
-    }
-
-    .section-title h2{
-        font-size:2rem;
-    }
-
-}
-/* ===== MOBILE MENU ===== */
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 700px) {
-
-    header {
-        padding: 8px 0;
-    }
-
-    .header-flex {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .logo img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .logo-text strong {
-        font-size: 21px;
-    }
-
-    .logo-text small {
-        font-size: 8px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        width: 100%;
-        background: #06101f;
-        flex-direction: column;
-        gap: 0;
-        padding: 10px 20px 15px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        z-index: 1000;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    nav a {
-        padding: 13px 10px;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    nav a:last-child {
-        border-bottom: none;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero .contact-highlight {
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 30px;
-        padding: 18px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .contact-preview-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-</style>
-</head>
-
-<body>
-
-
-<!-- ================= HEADER ================= -->
-
-<header>
-    <div class="container header-flex">
-
-        <div class="logo">
-            <img src="logo.png" alt="Raza IT Recycling Logo">
-            
-            <div class="logo-text">
-                <strong>IT <span>RAZA</span></strong>
-                <small>SCRAP BUYERS</small>
-            </div>
-        </div>
-<button class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-</button>
-        <nav>
-            <a href="index.html" >Home</a>
-            <a href="item.html">Items</a>
-            <a href="sell.html">Buyer</a>
-            <a href="gaming.html">Gaming</a>
-            <a href="about.html" class="active"> About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-    </div>
-</header>
-
-<!-- ================= BACK ================= -->
-<div class="container back-row">
-    <a href="index.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i>
-        Back to Home
-    </a>
-</div>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="about-hero">
-
-<div class="hero-grid">
-
-
-<div class="hero-text">
-
-<span class="badge">
-ABOUT IT RAZA • SHARJAH & UAE
-</span>
-
-
-<h1>
-
-ABOUT <span>IT RAZA</span>
-
-</h1>
-
-
-<p>
-
-IT Raza is a professional buying and selling
-business focused on IT equipment, electronics,
-gaming products, networking equipment,
-music & sound systems and selected medical
-equipment across Sharjah & UAE.
-
-</p>
-
-
-<div class="hero-btns">
-
-<a
-class="primary-btn"
-href="sell.html">
-
-<i class="fas fa-hand-holding-dollar"></i>
-
-Sell Your Items
-
-</a>
-
-
-<a
-class="secondary-btn"
-href="item.html">
-
-<i class="fas fa-cart-shopping"></i>
-
-Browse Items
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- ANIMATED VISUAL -->
-
-<div class="hero-visual">
-
-<div class="orbit">
-
-<div class="orbit-dot"></div>
-
-</div>
-
-
-<div class="visual-circle">
-
-<i class="fas fa-microchip"></i>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-<div class="container stats-grid">
-
-
-<div class="stat">
-
-<i class="fas fa-boxes-stacked"></i>
-
-<h2>
-
-<span
-class="counter"
-data-target="500">
-0
-</span>+
-
-</h2>
-
-<p>
-Items Handled
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<i class="fas fa-users"></i>
-
-<h2>
-
-<span
-class="counter"
-data-target="300">
-0
-</span>+
-
-</h2>
-
-<p>
-Customers
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<i class="fas fa-layer-group"></i>
-
-<h2>
-
-<span
-class="counter"
-data-target="15">
-0
-</span>+
-
-</h2>
-
-<p>
-Categories
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<i class="fas fa-headset"></i>
-
-<h2>
-24/7
-</h2>
-
-<p>
-WhatsApp Support
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!--
-=================================================
-PART 1 END
-
-PART 2 IS PASTED DIRECTLY BELOW THIS LINE
-=================================================
--->
-
-<!-- ================= ABOUT STORY ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-WHO <span>WE ARE</span>
-</h2>
-
-<div class="line"></div>
-
-<p>
-Professional buying and selling of IT equipment,
-electronics and selected professional equipment.
-</p>
-
-</div>
-
-
-<div class="story-grid">
-
-
-<div class="story-image"></div>
-
-
-<div class="story-content">
-
-<span class="badge">
-IT RAZA • OUR STORY
-</span>
-
-<h2>
-BUILT ON <span>TRUST & VALUE</span>
-</h2>
-
-<p>
-IT Raza is focused on making the process of
-buying and selling equipment simple, convenient
-and professional.
-</p>
-
-<p>
-We deal in a wide range of IT hardware,
-networking equipment, gaming products,
-music & sound systems and selected medical
-equipment in Sharjah UAE.
-</p>
-
-
-<div class="story-list">
-
-<div>
-<i class="fas fa-circle-check"></i>
-IT Hardware & Computer Equipment
-</div>
-
-<div>
-<i class="fas fa-circle-check"></i>
-Laptops, PCs & Components
-</div>
-
-<div>
-<i class="fas fa-circle-check"></i>
-Networking & Server Equipment
-</div>
-
-<div>
-<i class="fas fa-circle-check"></i>
-Gaming Products & Accessories
-</div>
-
-<div>
-<i class="fas fa-circle-check"></i>
-Music & Professional Sound Systems
-</div>
-
-<div>
-<i class="fas fa-circle-check"></i>
-Selected Medical Equipment
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= WHY US ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-WHY <span>IT RAZA?</span>
-</h2>
-
-<div class="line"></div>
-
-<p>
-Our goal is to provide a smooth and reliable
-experience for both buyers and sellers.
-</p>
-
-</div>
-
-
-<div class="why-grid">
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fas fa-handshake"></i>
-
-</div>
-
-<h3>
-Trusted Service
-</h3>
-
-<p>
-Professional communication and a straightforward
-process for buying and selling equipment.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fas fa-magnifying-glass"></i>
-
-</div>
-
-<h3>
-Proper Evaluation
-</h3>
-
-<p>
-We consider the item's model, condition,
-specifications and market demand.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fas fa-bolt"></i>
-
-</div>
-
-<h3>
-Quick Response
-</h3>
-
-<p>
-Send your item details through WhatsApp
-and get a quick response from our team.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fas fa-layer-group"></i>
-
-</div>
-
-<h3>
-Wide Categories
-</h3>
-
-<p>
-IT, networking, gaming, audio, electronics
-and selected medical equipment.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fas fa-location-dot"></i>
-
-</div>
-
-<h3>
-SHARJAH & UAE
-</h3>
-
-<p>
-Serving customers and businesses across
-Dubai and the UAE.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-
-<i class="fab fa-whatsapp"></i>
-
-</div>
-
-<h3>
-Easy WhatsApp Contact
-</h3>
-
-<p>
-Contact us directly through WhatsApp for
-availability, details and quotations.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= DEALING CATEGORIES ================= -->
-
-<section class="section categories-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-WHAT <span>WE DEAL IN</span>
-</h2>
-
-<div class="line"></div>
-
-<p>
-Explore our major equipment categories.
-</p>
-
-</div>
-
-
-<div class="category-grid">
-
-
-<div class="category-card">
-
-<div class="category-number">
-01
-</div>
-
-<i class="fas fa-computer"></i>
-
-<h3>
-IT Hardware
-</h3>
-
-<p>
-Desktop PCs, laptops, processors,
-RAM, storage, monitors and components.
-</p>
-
-<a href="sell.html">
-Explore Items
-<i class="fas fa-arrow-right"></i>
-</a>
-
-</div>
-
-
-
-<div class="category-card">
-
-<div class="category-number">
-02
-</div>
-
-<i class="fas fa-network-wired"></i>
-
-<h3>
-Networking
-</h3>
-
-<p>
-Routers, switches, access points,
-servers and networking equipment.
-</p>
-
-<a href="sell.html">
-Explore Items
-<i class="fas fa-arrow-right"></i>
-</a>
-
-</div>
-
-
-
-<div class="category-card">
-
-<div class="category-number">
-03
-</div>
-
-<i class="fas fa-gamepad"></i>
-
-<h3>
-Gaming
-</h3>
-
-<p>
-Gaming PCs, consoles, controllers,
-accessories and gaming hardware.
-</p>
-
-<a href="gaming.html">
-Explore Gaming
-<i class="fas fa-arrow-right"></i>
-</a>
-
-</div>
-
-
-
-<div class="category-card">
-
-<div class="category-number">
-04
-</div>
-
-<i class="fas fa-volume-high"></i>
-
-<h3>
-Music & Sound
-</h3>
-
-<p>
-Speakers, amplifiers, mixers,
-microphones and PA sound systems.
-</p>
-
-<a href="sell.html">
-Explore Items
-<i class="fas fa-arrow-right"></i>
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= MISSION ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="mission-box">
-
-
-<div class="mission-icon">
-
-<i class="fas fa-bullseye"></i>
-
-</div>
-
-
-<div class="mission-content">
-
-<span>
-OUR MISSION
-</span>
-
-<h2>
-CREATING VALUE FROM
-<span>QUALITY EQUIPMENT</span>
-</h2>
-
-<p>
-Our mission is to connect buyers and sellers
-through a simple, convenient and professional
-process while giving equipment a new life and
-creating value for our customers.
-</p>
-
-</div>
-
-
-<a
-class="mission-btn"
-href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20know%20more%20about%20your%20services."
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-Contact Us
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= CTA ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="final-cta">
-
-<div>
-
-<span>
-READY TO DEAL WITH US?
-</span>
-
-<h2>
-LET'S <strong>CONNECT</strong>
-</h2>
-
-<p>
-Have equipment to sell or looking for something?
-Contact IT Raza directly.
-</p>
-
-</div>
-
-
-<div class="cta-buttons">
-
-<a
-href="sell.html"
-class="cta-sell">
-
-<i class="fas fa-hand-holding-dollar"></i>
-
-Sell Items
-
-</a>
-
-
-<a
-href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20contact%20you."
-target="_blank"
-class="cta-wa">
-
-<i class="fab fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-logo">IT <span>RAZA</span></div>
-        <p>SCRAP BUYERS</p>
-        <p style="margin-top:10px">We buy IT equipment, computer hardware, gaming gear, networking devices, print & sound systems across Sharjah & UAE.</p>
-        <div class="social">
-          <a href="https://wa.me/971504134208" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-  
-      <div>
-        <h3>QUICK LINKS</h3>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="item.html">Items</a>
-          <a href="gaming.html">Gaming</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-        </div>
-      </div>
-  
-      <div>
-        <h3>OUR SERVICES</h3>
-        <div class="footer-links">
-          <a href="item.html">IT Equipment</a>
-          <a href="item.html">Computer & Laptop</a>
-          <a href="item.html">Networking Devices</a>
-          <a href="item.html">Print & Accessories</a>
-          <a href="gaming.html">Gaming Gear</a>
-          <a href="item.html">Sound System</a>
-        </div>
-      </div>
-  
-      <div>
-        <h3>CONTACT US</h3>
-        <div class="contact-line"><i class="fab fa-whatsapp"></i> +971 50 413 4208</div>
-        <div class="contact-line"><i class="fas fa-envelope"></i> Owaisrazascrap@gmail.com</div>
-        <div class="contact-line"><i class="fas fa-location-dot"></i>Sharjah, United Arab Emirates</div>
-        <div class="contact-line"><i class="fas fa-clock"></i> Time Monday to Sunday 9:00am to 11:00pm</div>
-      </div>
-    </div>
-  
-    <div class="container copyright">
-      <span>© 2026 IT Raza Scrap Buyers. All Rights Reserved.</span>
-      <span>Gaming Equipment Buyers • Sharjah & UAE</span>
-    </div>
-  </footer>
-  
-
-
-<!-- ================= FLOATING WHATSAPP ================= -->
-
-<a
-class="float-wa"
-href="https://wa.me/971504134208"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-
-
-<!-- ================= TOP BUTTON ================= -->
-
-<a
-class="to-top"
-id="toTop"
-href="#">
-
-<i class="fas fa-arrow-up"></i>
-
-</a>
-
-
-
-<!-- ================= EXTRA CSS ================= -->
-
-<style>
-
-/* WHY GRID */
+/* ================= WHY US ================= */
 
 .why-grid{
     display:grid;
@@ -1799,7 +728,7 @@ href="#">
 }
 
 
-/* CATEGORY */
+/* ================= CATEGORY ================= */
 
 .categories-section{
     background:#071524;
@@ -1873,7 +802,7 @@ href="#">
 }
 
 
-/* MISSION */
+/* ================= MISSION ================= */
 
 .mission-box{
     display:grid;
@@ -1909,7 +838,6 @@ href="#">
     50%{
         box-shadow:0 0 30px #facc1535;
     }
-
 }
 
 .mission-content > span{
@@ -1949,7 +877,7 @@ href="#">
 }
 
 
-/* FINAL CTA */
+/* ================= FINAL CTA ================= */
 
 .final-cta{
     display:flex;
@@ -2007,7 +935,7 @@ href="#">
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     background:#040c16;
@@ -2094,7 +1022,7 @@ footer{
 }
 
 
-/* FLOAT WHATSAPP */
+/* ================= FLOATING WHATSAPP ================= */
 
 .float-wa{
     position:fixed;
@@ -2122,11 +1050,10 @@ footer{
     50%{
         transform:scale(1.08);
     }
-
 }
 
 
-/* TOP */
+/* ================= TOP BUTTON ================= */
 
 .to-top{
     position:fixed;
@@ -2151,9 +1078,37 @@ footer{
 }
 
 
-/* TABLET */
+/* ================= REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal-show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* ================= TABLET ================= */
 
 @media(max-width:1050px){
+
+    nav{
+        gap:14px;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    .hero-grid{
+        gap:30px;
+    }
 
     .category-grid{
         grid-template-columns:repeat(2,1fr);
@@ -2162,13 +1117,96 @@ footer{
     .footer-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media(max-width:760px){
+@media(max-width:800px){
+
+    .header-flex{
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        padding:8px 0;
+    }
+
+    .logo img{
+        width:55px;
+        height:55px;
+    }
+
+    .logo-text strong{
+        font-size:21px;
+    }
+
+    .logo-text small{
+        font-size:8px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#06101f;
+        flex-direction:column;
+        gap:0;
+        padding:10px 20px 15px;
+        border-top:1px solid rgba(255,255,255,0.1);
+        z-index:1000;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:13px 10px;
+        text-align:center;
+        border-bottom:1px solid rgba(255,255,255,0.08);
+        width:100%;
+    }
+
+    nav a:last-child{
+        border-bottom:none;
+    }
+
+    .top-wa{
+        display:none;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:60px 0;
+    }
+
+    .hero-text p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-btns{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
 
     .why-grid{
         grid-template-columns:1fr;
@@ -2191,13 +1229,59 @@ footer{
         flex-direction:column;
         align-items:flex-start;
     }
-
 }
 
 
-/* SMALL MOBILE */
+/* ================= SMALL MOBILE ================= */
 
 @media(max-width:550px){
+
+    .about-hero{
+        min-height:auto;
+    }
+
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+
+    .hero-visual{
+        height:340px;
+    }
+
+    .visual-circle{
+        width:240px;
+        height:240px;
+    }
+
+    .visual-circle i{
+        font-size:5rem;
+    }
+
+    .orbit{
+        width:285px;
+        height:285px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:0;
+        border-bottom:1px solid #213a54;
+    }
+
+    .stat:last-child{
+        border-bottom:0;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
 
     .category-grid{
         grid-template-columns:1fr;
@@ -2229,16 +1313,915 @@ footer{
         flex:1;
         text-align:center;
     }
-
 }
 
 </style>
+</head>
 
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="container header-flex">
+
+        <div class="logo">
+
+            <img
+                src="logo.png"
+                alt="IT Raza Scrap Buyers UAE logo"
+                loading="eager"
+            >
+
+            <div class="logo-text">
+                <strong>IT <span>RAZA</span></strong>
+                <small>SCRAP BUYERS</small>
+            </div>
+
+        </div>
+
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="item.html">Items</a>
+
+            <a href="sell.html">Buyer</a>
+
+            <a href="gaming.html">Gaming</a>
+
+            <a href="about.html" class="active">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= BACK ================= -->
+
+<div class="container back-row">
+
+    <a href="index.html" class="back-btn">
+
+        <i class="fas fa-arrow-left"></i>
+
+        Back to Home
+
+    </a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+<div class="hero-grid">
+
+<div class="hero-text">
+
+<span class="badge">
+ABOUT IT RAZA • UAE IT SCRAP BUYERS
+</span>
+
+<h1>
+ABOUT <span>IT RAZA</span>
+</h1>
+
+<p>
+IT Raza is a professional IT scrap buyer and e-waste
+recycling business serving customers and businesses
+across Sharjah, Dubai and the UAE. We deal with
+IT equipment, computers, laptops, servers, networking
+equipment, gaming products, electronics and selected
+professional equipment.
+</p>
+
+<div class="hero-btns">
+
+<a
+class="primary-btn"
+href="sell.html">
+
+<i class="fas fa-hand-holding-dollar"></i>
+
+Sell Your Items
+
+</a>
+
+<a
+class="secondary-btn"
+href="item.html">
+
+<i class="fas fa-cart-shopping"></i>
+
+Browse Items
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ANIMATED VISUAL -->
+
+<div class="hero-visual">
+
+<div class="orbit">
+
+<div class="orbit-dot"></div>
+
+</div>
+
+<div class="visual-circle">
+
+<i class="fas fa-microchip"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+
+<i class="fas fa-boxes-stacked"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="500">
+0
+</span>+
+
+</h2>
+
+<p>
+Items Handled
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-users"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="300">
+0
+</span>+
+
+</h2>
+
+<p>
+Customers
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-layer-group"></i>
+
+<h2>
+
+<span
+class="counter"
+data-target="15">
+0
+</span>+
+
+</h2>
+
+<p>
+Categories
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fas fa-headset"></i>
+
+<h2>
+24/7
+</h2>
+
+<p>
+WhatsApp Support
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT STORY ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHO <span>WE ARE</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Professional IT scrap buying, e-waste handling and
+equipment trading services for customers and businesses
+across Sharjah and the UAE.
+</p>
+
+</div>
+
+
+<div class="story-grid">
+
+<div
+class="story-image"
+role="img"
+aria-label="IT equipment and professional business environment"
+></div>
+
+
+<div class="story-content">
+
+<span class="badge">
+IT RAZA • OUR STORY
+</span>
+
+<h2>
+BUILT ON <span>TRUST & VALUE</span>
+</h2>
+
+<p>
+IT Raza focuses on making the process of buying and
+selling equipment simple, convenient and professional.
+</p>
+
+<p>
+We deal in a wide range of IT hardware, networking
+equipment, gaming products, music and sound systems
+and selected professional equipment in Sharjah and
+across the UAE.
+</p>
+
+<div class="story-list">
+
+<div>
+<i class="fas fa-circle-check"></i>
+IT Hardware & Computer Equipment
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Laptops, PCs & Components
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Networking & Server Equipment
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Gaming Products & Accessories
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Music & Professional Sound Systems
+</div>
+
+<div>
+<i class="fas fa-circle-check"></i>
+Selected Professional Equipment
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHY <span>IT RAZA?</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Our goal is to provide a smooth and reliable
+experience for customers and businesses
+looking to buy or sell equipment in the UAE.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fas fa-handshake"></i>
+</div>
+
+<h3>
+Trusted Service
+</h3>
+
+<p>
+Professional communication and a straightforward
+process for buying and selling equipment.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fas fa-magnifying-glass"></i>
+</div>
+
+<h3>
+Proper Evaluation
+</h3>
+
+<p>
+We consider the item's model, condition,
+specifications and market demand.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fas fa-bolt"></i>
+</div>
+
+<h3>
+Quick Response
+</h3>
+
+<p>
+Send your item details through WhatsApp
+and get a quick response from our team.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fas fa-layer-group"></i>
+</div>
+
+<h3>
+Wide Categories
+</h3>
+
+<p>
+IT equipment, networking, gaming, audio,
+electronics and other professional equipment.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fas fa-location-dot"></i>
+</div>
+
+<h3>
+SHARJAH & UAE
+</h3>
+
+<p>
+Serving customers and businesses across
+Sharjah, Dubai and the UAE.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<i class="fab fa-whatsapp"></i>
+</div>
+
+<h3>
+Easy WhatsApp Contact
+</h3>
+
+<p>
+Contact us directly through WhatsApp for
+availability, details and quotations.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DEALING CATEGORIES ================= -->
+
+<section class="section categories-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+WHAT <span>WE DEAL IN</span>
+</h2>
+
+<div class="line"></div>
+
+<p>
+Explore our major IT scrap, electronic and equipment categories.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category-card">
+
+<div class="category-number">
+01
+</div>
+
+<i class="fas fa-computer"></i>
+
+<h3>
+IT Hardware
+</h3>
+
+<p>
+Desktop PCs, laptops, processors,
+RAM, storage, monitors and components.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-number">
+02
+</div>
+
+<i class="fas fa-network-wired"></i>
+
+<h3>
+Networking
+</h3>
+
+<p>
+Routers, switches, access points,
+servers and networking equipment.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-number">
+03
+</div>
+
+<i class="fas fa-gamepad"></i>
+
+<h3>
+Gaming
+</h3>
+
+<p>
+Gaming PCs, consoles, controllers,
+accessories and gaming hardware.
+</p>
+
+<a href="gaming.html">
+Explore Gaming
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-number">
+04
+</div>
+
+<i class="fas fa-volume-high"></i>
+
+<h3>
+Music & Sound
+</h3>
+
+<p>
+Speakers, amplifiers, mixers,
+microphones and PA sound systems.
+</p>
+
+<a href="sell.html">
+Explore Items
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MISSION ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="mission-box">
+
+
+<div class="mission-icon">
+<i class="fas fa-bullseye"></i>
+</div>
+
+
+<div class="mission-content">
+
+<span>
+OUR MISSION
+</span>
+
+<h2>
+CREATING VALUE FROM
+<span>QUALITY EQUIPMENT</span>
+</h2>
+
+<p>
+Our mission is to connect buyers and sellers
+through a simple, convenient and professional
+process while giving equipment a new life and
+creating value for our customers.
+</p>
+
+</div>
+
+
+<a
+class="mission-btn"
+href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fab fa-whatsapp"></i>
+
+Contact Us
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="final-cta">
+
+<div>
+
+<span>
+READY TO DEAL WITH US?
+</span>
+
+<h2>
+LET'S <strong>CONNECT</strong>
+</h2>
+
+<p>
+Have IT equipment or electronic scrap to sell?
+Contact IT Raza directly for a quick response.
+</p>
+
+</div>
+
+
+<div class="cta-buttons">
+
+<a
+href="sell.html"
+class="cta-sell">
+
+<i class="fas fa-hand-holding-dollar"></i>
+
+Sell Items
+
+</a>
+
+
+<a
+href="https://wa.me/971504134208?text=Hello%20IT%20Raza%2C%20I%20want%20to%20contact%20you."
+target="_blank"
+rel="noopener noreferrer"
+class="cta-wa">
+
+<i class="fab fa-whatsapp"></i>
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-logo">
+IT <span>RAZA</span>
+</div>
+
+<p>SCRAP BUYERS</p>
+
+<p style="margin-top:10px">
+IT Raza buys IT equipment, computer hardware,
+gaming gear, networking devices, electronic equipment
+and selected professional equipment across Sharjah
+and the UAE.
+</p>
+
+<div class="social">
+
+<a
+href="https://wa.me/971504134208"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact IT Raza on WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="IT Raza Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="IT Raza Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>QUICK LINKS</h3>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="item.html">Items</a>
+
+<a href="gaming.html">Gaming</a>
+
+<a href="about.html">About Us</a>
+
+<a href="contact.html">Contact Us</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>OUR SERVICES</h3>
+
+<div class="footer-links">
+
+<a href="item.html">IT Equipment</a>
+
+<a href="item.html">Computer & Laptop</a>
+
+<a href="item.html">Networking Devices</a>
+
+<a href="item.html">Print & Accessories</a>
+
+<a href="gaming.html">Gaming Equipment</a>
+
+<a href="item.html">Sound System</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>CONTACT US</h3>
+
+<div class="contact-line">
+<i class="fab fa-whatsapp"></i>
++971 50 413 4208
+</div>
+
+<div class="contact-line">
+<i class="fas fa-envelope"></i>
+Owaisrazascrap@gmail.com
+</div>
+
+<div class="contact-line">
+<i class="fas fa-location-dot"></i>
+Sharjah, United Arab Emirates
+</div>
+
+<div class="contact-line">
+<i class="fas fa-clock"></i>
+Monday to Sunday 9:00am to 11:00pm
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container copyright">
+
+<span>
+© 2026 IT Raza Scrap Buyers. All Rights Reserved.
+</span>
+
+<span>
+IT Scrap Buyers • E-Waste Recycling • Sharjah • Dubai • UAE
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+class="float-wa"
+href="https://wa.me/971504134208"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact IT Raza on WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<!-- ================= TOP BUTTON ================= -->
+
+<a
+class="to-top"
+id="toTop"
+href="#"
+aria-label="Back to top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
 
 
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+    const nav = document.querySelector("nav");
+    const button = document.querySelector(".menu-toggle");
+
+    nav.classList.toggle("show");
+
+    const isOpen = nav.classList.contains("show");
+
+    button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+}
+
 
 /* ================= COUNTERS ================= */
 
@@ -2248,153 +2231,126 @@ document.querySelectorAll(".counter");
 const counterObserver =
 new IntersectionObserver((entries,observer)=>{
 
-entries.forEach(entry=>{
+    entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-const counter=entry.target;
+            const counter=entry.target;
 
-const target=
-parseInt(counter.dataset.target);
+            const target=
+            parseInt(counter.dataset.target);
 
-let current=0;
+            let current=0;
 
-const speed=20;
+            const update=()=>{
 
-const update=()=>{
+                const increment =
+                Math.max(1,Math.ceil(target/70));
 
-const increment=
-Math.max(1,Math.ceil(target/70));
+                current+=increment;
 
-current+=increment;
+                if(current>=target){
 
-if(current>=target){
+                    counter.textContent=target;
 
-counter.textContent=target;
+                }else{
 
-}else{
+                    counter.textContent=current;
 
-counter.textContent=current;
+                    requestAnimationFrame(update);
 
-requestAnimationFrame(update);
+                }
 
-}
+            };
 
-};
+            update();
 
-update();
+            observer.unobserve(counter);
 
-observer.unobserve(counter);
+        }
 
-}
-
-});
+    });
 
 },{
-threshold:.5
+    threshold:.5
 });
 
 
 counters.forEach(counter=>{
-counterObserver.observe(counter);
+    counterObserver.observe(counter);
 });
-
 
 
 /* ================= SCROLL TOP ================= */
 
-const toTop=
+const toTop =
 document.getElementById("toTop");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>450){
+    if(window.scrollY>450){
 
-toTop.classList.add("show");
+        toTop.classList.add("show");
 
-}else{
+    }else{
 
-toTop.classList.remove("show");
+        toTop.classList.remove("show");
 
-}
+    }
 
 });
 
 
 toTop.addEventListener("click",(e)=>{
 
-e.preventDefault();
+    e.preventDefault();
 
-window.scrollTo({
+    window.scrollTo({
 
-top:0,
+        top:0,
 
-behavior:"smooth"
+        behavior:"smooth"
+
+    });
 
 });
-
-});
-
 
 
 /* ================= SCROLL REVEAL ================= */
 
-const revealElements=
+const revealElements =
 document.querySelectorAll(
 ".why-card,.category-card,.story-content,.story-image,.mission-box,.final-cta"
 );
 
 
-const revealObserver=
+const revealObserver =
 new IntersectionObserver((entries)=>{
 
-entries.forEach(entry=>{
+    entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-entry.target.classList.add("reveal-show");
+            entry.target.classList.add("reveal-show");
 
-}
+        }
 
-});
+    });
 
 },{
-threshold:.12
+    threshold:.12
 });
 
 
 revealElements.forEach(el=>{
 
-el.classList.add("reveal");
+    el.classList.add("reveal");
 
-revealObserver.observe(el);
+    revealObserver.observe(el);
 
 });
 
 </script>
 
-
-<style>
-
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:
-    opacity .8s ease,
-    transform .8s ease;
-}
-
-.reveal-show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-</style>
-<script>
-function toggleMenu() {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("show");
-}
-</script>
 </body>
 </html>
