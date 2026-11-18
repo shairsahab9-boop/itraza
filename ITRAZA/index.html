@@ -515,6 +515,107 @@
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
 }
+    
+/* ===== PRODUCT HEADLINES TICKER ===== */
+
+.product-ticker {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #06101f;
+    border-bottom: 3px solid #ffc400;
+    min-height: 65px;
+    position: relative;
+}
+
+.ticker-heading {
+    background: #ffc400;
+    color: #06101f;
+    padding: 22px 25px;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #06101f;
+    border-radius: 50%;
+    margin-right: 7px;
+    animation: tickerPulse 1s infinite;
+}
+
+.ticker-track {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    animation: tickerMove 32s linear infinite;
+}
+
+.ticker-content span {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 22px;
+}
+
+.ticker-content span:nth-child(even) {
+    color: #ffc400;
+    padding: 0 5px;
+}
+
+.ticker-track:hover .ticker-content {
+    animation-play-state: paused;
+}
+
+@keyframes tickerMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes tickerPulse {
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 700px) {
+    .product-ticker {
+        min-height: 52px;
+    }
+
+    .ticker-heading {
+        padding: 17px 12px;
+        font-size: 11px;
+    }
+
+    .ticker-content span {
+        font-size: 12px;
+        padding: 0 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ticker-content {
+        animation: none;
+    }
+}
+
 </style>
 </head>
 
@@ -547,6 +648,46 @@
 
     </div>
 </header>
+
+<!-- PRODUCT HEADLINES TICKER -->
+<section class="product-ticker">
+    <div class="ticker-heading">
+        <span class="live-dot"></span>
+        WE BUY
+    </div>
+
+    <div class="ticker-track">
+        <div class="ticker-content">
+            <span>💻 Laptops & Desktops</span>
+            <span>✦</span>
+            <span>🖥️ Servers & Workstations</span>
+            <span>✦</span>
+            <span>🌐 Routers & Network Switches</span>
+            <span>✦</span>
+            <span>🖨️ Printers & Monitors</span>
+            <span>✦</span>
+            <span>🎮 Gaming Equipment</span>
+            <span>✦</span>
+            <span>🔌 IT Hardware & E-Waste</span>
+            <span>✦</span>
+        </div>
+
+        <div class="ticker-content" aria-hidden="true">
+            <span>💻 Laptops & Desktops</span>
+            <span>✦</span>
+            <span>🖥️ Servers & Workstations</span>
+            <span>✦</span>
+            <span>🌐 Routers & Network Switches</span>
+            <span>✦</span>
+            <span>🖨️ Printers & Monitors</span>
+            <span>✦</span>
+            <span>🎮 Gaming Equipment</span>
+            <span>✦</span>
+            <span>🔌 IT Hardware & E-Waste</span>
+            <span>✦</span>
+        </div>
+    </div>
+</section>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
